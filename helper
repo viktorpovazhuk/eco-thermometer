@@ -1,0 +1,74 @@
+1. add wire.h -> can't just join
+2. find good library and guide for it for msp430fr
+3. check msp430 library (build just with lib) +
+4. find example in resource explorer +
+5. find driver lib user guide
+
+
+
+
+
+
+
+-----------------------
+1. find datasheet
+2. connect to arduino -> in tutorial - special library +
+2.1 remind spi theory + -> read i2c theory +
+2.2 google msp430 spi -> don't try to find sth fast ! -> read basics article -> guide or youtube
+-> parts from guide: clock + youtube: combining
+-> ask +
+3. fix library error +
+
+
+------------------------
+4. find another lib +
+5. work on fram -> read guide for lib
+
+6. build lib
+
+
+
+
+
+
+
+
+------------------------
+1. run in /home/vityha/ti/ccs1100/ccs/install_scripts/install_drivers.sh
+2. connect temperature sensor
+
+3. create presentation +
+4. watch 1 ex of intro +
+5. create repo +
+
+6. find videos +
+
+7. read workshop
+
+8. find instruction for 1 connection +
+--------------------------
+9. which port to led? -> table isn't in datasheet, but for mcu pinout i have a picture in Hardware Features
+nevertheless, word 'led P1.0' I can see on board only
+
+10. read chapter to end +
+11. find guide to connect sensor -> use ready library -> check if I know enough -> don't know +
+
+12. or understand that -> don't know many things -> try to find another guide with GOOD DESCRIPTION (images and commented code) -> ask mentor -> wait +
+
+--------------------------------------
+1. find driverlib: /home/vityha/ti/msp430ware_3_80_14_01/driverlib
+2. try to connect +
+3. go to VS Code +
+
+4. try to blink
+5. connect sensor
+6. select pin ? -> datasheet -_-
+7. investigate libs +
+8. write my own code to connect -> find example in lib examples
+9. set pin in IN mode and UNLOCK -> load driverlib in project -> try another lib
+--------------------------------------
+1. reread workshop + -> insert Arduino.h in ccs -> include OneWire.h + - check if it is read (later)
+2. connect signal analyzer -> read digital input ?
+2.2 need to send some signal ? -> try to analyze pin
+3. how analogWrite work +
+4. try to debug

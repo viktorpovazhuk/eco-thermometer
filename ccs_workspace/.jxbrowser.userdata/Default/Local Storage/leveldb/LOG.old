@@ -1,0 +1,6 @@
+2021/12/08-15:29:34.734 423a Reusing MANIFEST /home/vityha/POC/msp_workshop/FR4133_fram/workspace/.jxbrowser.userdata/Default/Local Storage/leveldb/MANIFEST-000001
+2021/12/08-15:29:34.734 423a Recovering log #3
+2021/12/08-15:29:34.735 423a Reusing old log /home/vityha/POC/msp_workshop/FR4133_fram/workspace/.jxbrowser.userdata/Default/Local Storage/leveldb/000003.log 
+2021/12/08-16:26:32.162 59f6 Level-0 table #5: started
+2021/12/08-16:26:32.164 59f6 Level-0 table #5: 16130 bytes OK
+2021/12/08-16:26:32.167 59f6 Delete type=0 #3

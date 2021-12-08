@@ -1,0 +1,26 @@
+
+**** Build of configuration Debug for project sensor ****
+
+/home/vityha/ti/ccs1100/ccs/utils/bin/gmake -k -j 6 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"/home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/bin/cl430" -vmspx --code_model=small --use_hw_mpy=F5 --include_path="/home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include" --include_path="/home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor/driverlib/driverlib/MSP430FR2xx_4xx" --include_path="/home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor" --include_path="/home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR2433__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 32: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 38: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 39: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 40: remark #1532-D: (ULP 5.3) Detected printf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 40: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+Finished building: "../main.c"
+ 
+Building target: "sensor.out"
+Invoking: MSP430 Linker
+"/home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/bin/cl430" -vmspx --code_model=small --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR2433__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"sensor.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include" -i"/home/vityha/ti/ccs1100/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/lib" -i"/home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="sensor_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "sensor.out" "./main.obj" "./onewire.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/adc.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/crc.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/cs.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/ecomp.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/eusci_a_spi.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/eusci_a_uart.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/eusci_b_i2c.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/eusci_b_spi.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/framctl.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/gpio.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/icc.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/lcd_e.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/mpy32.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/pmm.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/rtc.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/sac.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/sfr.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/sysctl.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/tia.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/timer_a.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/timer_b.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/tlv.obj" "./driverlib/driverlib/MSP430FR2xx_4xx/wdt_a.obj" "../lnk_msp430fr2433.cmd"  -llibmath.a -llibc.a 
+<Linking>
+warning #10229-D: output section ".data" refers to load symbol "_nop" and hence cannot be compressed; compression "lzss" is ignored
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "sensor.out"
+ 
+
+**** Build Finished ****
