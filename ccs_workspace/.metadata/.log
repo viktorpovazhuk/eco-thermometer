@@ -3496,3 +3496,192 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio
 	CCS build: 11.0.0.00012
 	CCS location: /home/vityha/ti/ccs1100/ccs
 	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace (previously: /home/vityha/POC/msp_workshop/FR4133_fram/workspace)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-12-08 16:50:44.989
+!MESSAGE DS_ERROR: MSP430: Error initializing emulator: Interface Communication error
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-12-08 16:50:45.154
+!MESSAGE DS_ERROR: Error initializing emulator:
+Interface Communication error
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-12-08 16:50:50.274
+!MESSAGE DS_ERROR: MSP430: Error initializing emulator: Interface Communication error
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-12-08 16:50:50.289
+!MESSAGE DS_ERROR: Error initializing emulator:
+Interface Communication error
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-12-08 16:51:10.808
+!MESSAGE DS_ERROR: MSP430: Error connecting to the target: The target setup (MSP430FR4133) does not match the actual target type (MSP430FR2433)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-12-08 16:51:10.879
+!MESSAGE DS_ERROR: Error connecting to the target:
+The target setup (MSP430FR4133) does not match the actual target type (MSP430FR2433)
+!SESSION 2021-12-10 15:36:47.421 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-12-10 15:36:48.984
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-12-10 15:36:48.987
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-12-10 15:36:56.317
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-12-10 15:36:56.759
+!MESSAGE CCS HTTP adapter started! [ccs.port:40423] - Open 'http://localhost:40423/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-10 15:39:41.645
+!MESSAGE Indexed 'ctpl_ex1_gpio_lpm45_msp-exp430fr2433' (40 sources, 78 headers) in 1.6 sec: 2,102 declarations; 5,721 references; 0 unresolved inclusions; 1 syntax errors; 9 unresolved names (0.11%)
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2021-12-10 15:41:35.330
+!MESSAGE REX Launching REX 4.1 (online)
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2021-12-10 15:41:38.232
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2021-12-10 15:41:38.573
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop
+!SESSION 2021-12-13 20:47:11.190 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-12-13 20:47:12.749
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-12-13 20:47:12.752
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-12-13 20:47:20.105
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-12-13 20:47:20.698
+!MESSAGE CCS HTTP adapter started! [ccs.port:36235] - Open 'http://localhost:36235/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2021-12-13 20:52:26.066
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop
+
+!ENTRY com.ti.common.project.core 1 0 2021-12-13 20:53:12.656
+!MESSAGE An Eclipse project already exists at location '/home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/ctpl_ex1_gpio_lpm45_msp-exp430fr2433'! 
+
+!ENTRY com.ti.common.project.core 1 0 2021-12-13 20:53:35.475
+!MESSAGE An Eclipse project already exists at location '/home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/ctpl_ex1_gpio_lpm45_msp-exp430fr2433'! 
+
+!ENTRY com.ti.common.project.core 1 0 2021-12-13 20:53:51.042
+!MESSAGE An Eclipse project already exists at location '/home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/ctpl_ex1_gpio_lpm45_msp-exp430fr2433'! 
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-13 20:54:23.878
+!MESSAGE Indexed 'ctpl_ex1_gpio_lpm45_msp-exp430fr2433' (40 sources, 78 headers) in 1.17 sec: 2,102 declarations; 5,721 references; 0 unresolved inclusions; 1 syntax errors; 9 unresolved names (0.11%)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-12-13 20:54:31.940
+!MESSAGE DS_ERROR: MSP430: GEL: Encountered a problem loading file: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/ctpl_ex1_gpio_lpm45_msp-exp430fr2433/Debug/ctpl_ex1_gpio_lpm45_msp-exp430fr2433.out Could not open file
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-13 20:58:30.861
+!MESSAGE Indexed 'ctpl_ex2_rtc_lpm35_msp-exp430fr2433' (40 sources, 78 headers) in 0.534 sec: 2,108 declarations; 5,718 references; 0 unresolved inclusions; 2 syntax errors; 9 unresolved names (0.11%)
+
+!ENTRY com.ti.common.project.core 1 0 2021-12-13 21:01:04.657
+!MESSAGE A project with name 'ctpl_ex1_gpio_lpm45_msp-exp430fr2433' already exists in the workspace!
+!SESSION 2021-12-14 08:00:46.483 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-12-14 08:00:48.905
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-12-14 08:00:48.908
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-12-14 08:00:57.816
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-12-14 08:00:58.346
+!MESSAGE CCS HTTP adapter started! [ccs.port:40497] - Open 'http://localhost:40497/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2021-12-14 17:48:23.474
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop
+!SESSION 2021-12-15 16:41:09.741 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-12-15 16:41:11.279
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-12-15 16:41:11.282
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2021-12-15 16:41:17.793
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-12-15 16:41:18.709
+!MESSAGE CCS HTTP adapter started! [ccs.port:46571] - Open 'http://localhost:46571/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-12-15 16:41:21.952
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-15 16:49:54.505
+!MESSAGE Indexed 'ctpl_test' (1 sources, 5 headers) in 0.301 sec: 548 declarations; 1,098 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2021-12-16 15:25:30.553 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-12-16 15:25:32.755
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-12-16 15:25:32.758
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-12-16 15:25:41.815
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-12-16 15:25:42.313
+!MESSAGE CCS HTTP adapter started! [ccs.port:45889] - Open 'http://localhost:45889/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 4 1000 2021-12-16 15:25:50.621
+!MESSAGE No repository found at http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/CCSv5/Updates/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-12-16 15:25:53.353
+!MESSAGE No repository found at http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/CCSv5/Updates/.
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2021-12-16 15:27:47.308
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop

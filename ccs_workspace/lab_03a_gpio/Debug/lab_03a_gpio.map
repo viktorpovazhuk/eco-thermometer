@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker Unix v21.6.0                   
 ******************************************************************************
->> Linked Sat Nov 27 11:36:01 2021
+>> Linked Mon Dec 13 20:58:55 2021
 
 OUTPUT FILE NAME:   <lab_03a_gpio.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 0000c4c4

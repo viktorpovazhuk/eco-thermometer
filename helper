@@ -1,9 +1,36 @@
+1. try fram app +
+2. what is lpm4.5 +
+3. read part about interrupts +
+4. find designs for entering lpm -> try
+5. ask
+
+
+
+
+
+
+
+
+
+
+
+
+.....................................................
 1. add wire.h -> can't just join
 2. find good library and guide for it for msp430fr
 3. check msp430 library (build just with lib) +
 4. find example in resource explorer +
-5. find driver lib user guide
+5. find driver lib user guide +
+6. find an example of use +
+7. VS Code - connect somehow, later - incapsulate in CCS (if sth goes wrong): no CCS now - move on levels of complexity down in VS Code
 
+8. debug function
+9. turn on debug mode in lib +
+10. read in ds how to read data
+11. try to find realization +
+
+12. use ctpl
+13. read new user guide +
 
 
 

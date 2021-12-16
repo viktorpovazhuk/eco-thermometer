@@ -1,7 +1,7 @@
 # FIXED
 
 driverlib/timer_a.obj: ../driverlib/timer_a.c
-driverlib/timer_a.obj: /home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor_i2c/driverlib/inc/hw_memmap.h
+driverlib/timer_a.obj: /home/vityha/Documents/Ð£ÐÐ£/POC/nonvolatile_thermometer/ccs_workspace/sensor_i2c/driverlib/inc/hw_memmap.h
 driverlib/timer_a.obj: /home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include/msp430.h
 driverlib/timer_a.obj: /home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include/msp430fr2433.h
 driverlib/timer_a.obj: /home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include/in430.h
@@ -19,12 +19,12 @@ driverlib/timer_a.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_
 driverlib/timer_a.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/machine/_stdint.h
 driverlib/timer_a.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/sys/_stdint.h
 driverlib/timer_a.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/stdbool.h
-driverlib/timer_a.obj: /home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor_i2c/driverlib/timer_a.h
+driverlib/timer_a.obj: /home/vityha/Documents/Ð£ÐÐ£/POC/nonvolatile_thermometer/ccs_workspace/sensor_i2c/driverlib/timer_a.h
 driverlib/timer_a.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/assert.h
 
 ../driverlib/timer_a.c:
 
-/home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor_i2c/driverlib/inc/hw_memmap.h:
+/home/vityha/Documents/Ð£ÐÐ£/POC/nonvolatile_thermometer/ccs_workspace/sensor_i2c/driverlib/inc/hw_memmap.h:
 
 /home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include/msp430.h:
 
@@ -60,7 +60,7 @@ driverlib/timer_a.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_
 
 /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/stdbool.h:
 
-/home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor_i2c/driverlib/timer_a.h:
+/home/vityha/Documents/Ð£ÐÐ£/POC/nonvolatile_thermometer/ccs_workspace/sensor_i2c/driverlib/timer_a.h:
 
 /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/assert.h:
 

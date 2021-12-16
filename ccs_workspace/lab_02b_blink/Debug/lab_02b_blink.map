@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker Unix v21.6.0                   
 ******************************************************************************
->> Linked Wed Nov 17 12:32:21 2021
+>> Linked Mon Dec 13 21:00:26 2021
 
 OUTPUT FILE NAME:   <lab_02b_blink.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 0000c428

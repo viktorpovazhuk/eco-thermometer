@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="11.0.0"/>
+	<deviceVariant value="MSP430FR2433"/>
+	<deviceFamily value="MSP430"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="21.6.0.LTS"/>
+	<isElfFormat value="true"/>
+	<linkerCommandFile value="ctpl_lnk_msp430fr2433.cmd"/>
+	<rts value="libc.a"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=ctpl_ex1_gpio_lpm45_msp-exp430fr2433.projectspec.ctpl_ex1_gpio_lpm45_msp-exp430fr2433"/>
+	<origin value="/home/vityha/ti/msp430ware_3_80_14_01/fram_utilities/examples/ctpl/msp-exp430fr2433/CCS/ctpl_ex1_gpio_lpm45_msp-exp430fr2433.projectspec"/>
+	<filesToOpen value=""/>
+</projectOptions>

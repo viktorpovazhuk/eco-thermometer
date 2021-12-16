@@ -1,7 +1,7 @@
 # FIXED
 
 driverlib/adc.obj: ../driverlib/adc.c
-driverlib/adc.obj: /home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor_i2c/driverlib/inc/hw_memmap.h
+driverlib/adc.obj: /home/vityha/Documents/Ð£ÐÐ£/POC/nonvolatile_thermometer/ccs_workspace/sensor_i2c/driverlib/inc/hw_memmap.h
 driverlib/adc.obj: /home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include/msp430.h
 driverlib/adc.obj: /home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include/msp430fr2433.h
 driverlib/adc.obj: /home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include/in430.h
@@ -19,12 +19,12 @@ driverlib/adc.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6
 driverlib/adc.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/machine/_stdint.h
 driverlib/adc.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/sys/_stdint.h
 driverlib/adc.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/stdbool.h
-driverlib/adc.obj: /home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor_i2c/driverlib/adc.h
+driverlib/adc.obj: /home/vityha/Documents/Ð£ÐÐ£/POC/nonvolatile_thermometer/ccs_workspace/sensor_i2c/driverlib/adc.h
 driverlib/adc.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/assert.h
 
 ../driverlib/adc.c:
 
-/home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor_i2c/driverlib/inc/hw_memmap.h:
+/home/vityha/Documents/Ð£ÐÐ£/POC/nonvolatile_thermometer/ccs_workspace/sensor_i2c/driverlib/inc/hw_memmap.h:
 
 /home/vityha/ti/ccs1100/ccs/ccs_base/msp430/include/msp430.h:
 
@@ -60,7 +60,7 @@ driverlib/adc.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6
 
 /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/stdbool.h:
 
-/home/vityha/POC/msp_workshop/FR4133_fram/workspace/sensor_i2c/driverlib/adc.h:
+/home/vityha/Documents/Ð£ÐÐ£/POC/nonvolatile_thermometer/ccs_workspace/sensor_i2c/driverlib/adc.h:
 
 /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/assert.h:
 

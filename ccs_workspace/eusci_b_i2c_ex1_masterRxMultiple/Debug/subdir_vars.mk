@@ -4,7 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CMD_SRCS += \
-../lnk_msp430fr4133.cmd 
+../lnk_msp430fr2433.cmd 
 
 C_SRCS += \
 ../eusci_b_i2c_ex1_masterRxMultiple.c 
