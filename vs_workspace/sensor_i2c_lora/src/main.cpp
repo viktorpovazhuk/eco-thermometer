@@ -121,10 +121,7 @@ void printBME280Data(
   // LoRa.print(hum);
   // LoRa.print("pressure: ");
   // LoRa.print(pres);
-  for (int i = 0; i < 8; i++)
-  {
-    LoRa.print((float)data[i]);
-  }
+  LoRa.write((uint8_t*)data, 8*4);
 
   LoRa.endPacket();
 
