@@ -9,6 +9,14 @@ This code is intended for receiving packets via LoRa on TTGO LoRa v2.0
 
 OLED_CLASS_OBJ display(OLED_ADDRESS, OLED_SDA, OLED_SCL);
 
+#include "BME280I2C.h"
+
+void printBME280Data(
+    Stream *client,
+    uint32_t *data);
+BME280I2C bme; // Default : forced mode, standby time = 1000 ms
+// Oversampling = pressure ×1, temperature ×1, humidity ×1, filter off,
+
 void setup()
 {
   Serial.begin(115200);
@@ -58,4 +66,34 @@ void loop()
     display.drawString(display.getWidth() / 2, display.getHeight() / 2 - 16, info);
     display.display();
   }
+  
+  uint32_t data[8];
+  
+  printBME280Data(&Serial, data);
+  delay(500);
+}
+
+//////////////////////////////////////////////////////////////////
+void printBME280Data(
+    Stream *client,
+    uint32_t *data)
+{
+  float temp(NAN), hum(NAN), pres(NAN);
+
+  BME280::TempUnit tempUnit(BME280::TempUnit_Celsius);
+  BME280::PresUnit presUnit(BME280::PresUnit_Pa);
+
+  bme.read(data, pres, temp, hum, tempUnit, presUnit);
+
+  client->print("Temp: ");
+  client->print(temp);
+  client->print("°" + String(tempUnit == BME280::TempUnit_Celsius ? 'C' : 'F'));
+  client->print("\t\tHumidity: ");
+  client->print(hum);
+  client->print("% RH");
+  client->print("\t\tPressure: ");
+  client->print(pres);
+  client->println("Pa");
+
+  delay(1000);
 }
