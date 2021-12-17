@@ -98,8 +98,10 @@ void printBME280Data(
   BME280::PresUnit presUnit(BME280::PresUnit_Pa);
 
   int32_t data[8];
+  uint8_t out_dig[32];
 
   bme.read(pres, temp, hum, tempUnit, presUnit, data);
+  bme.readDig(out_dig);
 
   Serial.print("Raw data: ");
   for (int i = 0; i < 8; i++)
@@ -109,9 +111,15 @@ void printBME280Data(
   }
   Serial.println();
 
-  delay(1000);
+  Serial.print("Dig: ");
+  for (int i = 0; i < 32; i++)
+  {
+    Serial.print(out_dig[i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
 
-  Serial.print("Sending packet ");
+  Serial.println("Sending packet ");
 
   // send packet
   LoRa.beginPacket();
@@ -121,7 +129,8 @@ void printBME280Data(
   // LoRa.print(hum);
   // LoRa.print("pressure: ");
   // LoRa.print(pres);
-  LoRa.write((uint8_t*)data, 8*4);
+  LoRa.write((uint8_t *)data, 8 * 4);
+  LoRa.write((uint8_t *)out_dig, 32);
 
   LoRa.endPacket();
 

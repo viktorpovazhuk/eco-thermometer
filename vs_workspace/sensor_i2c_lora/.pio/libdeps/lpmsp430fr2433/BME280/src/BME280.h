@@ -190,6 +190,8 @@ public:
         PresUnit presUnit = PresUnit_hPa,
         int32_t *data = NULL);
 
+    void readDig(uint8_t *out_dig);
+
     /*****************************************************************/
     /* ACCESSOR FUNCTIONS                                            */
     /*****************************************************************/

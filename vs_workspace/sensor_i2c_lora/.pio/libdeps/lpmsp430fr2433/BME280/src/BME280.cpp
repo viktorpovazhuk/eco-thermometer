@@ -450,6 +450,12 @@ void BME280::read(
 }
 
 /****************************************************************/
+void BME280::readDig(uint8_t *out_dig)
+{
+   memcpy(out_dig, m_dig, 32);
+}
+
+/****************************************************************/
 BME280::ChipModel BME280::chipModel()
 {
    return m_chip_model;
