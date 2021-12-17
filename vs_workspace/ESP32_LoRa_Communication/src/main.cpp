@@ -78,6 +78,14 @@ void loop()
     display.display();
   }
 
+  Serial.print("Raw data: ");
+  for (int i = 0; i < 8; i++)
+  {
+    Serial.print(data[i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
+
   printBME280Data(&Serial, data);
   delay(500);
 }

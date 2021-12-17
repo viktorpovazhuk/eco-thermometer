@@ -101,12 +101,13 @@ void printBME280Data(
 
   bme.read(pres, temp, hum, tempUnit, presUnit, data);
 
-  Serial.println("Raw data");
+  Serial.print("Raw data: ");
   for (int i = 0; i < 8; i++)
   {
     Serial.print(data[i], HEX);
     Serial.print(" ");
   }
+  Serial.println();
 
   delay(1000);
 
@@ -124,7 +125,7 @@ void printBME280Data(
   {
     LoRa.print((float)data[i]);
   }
-  
+
   LoRa.endPacket();
 
   delay(1000);
