@@ -64,12 +64,7 @@ void loop()
   if (LoRa.parsePacket())
   {
     String recv = "";
-    while (LoRa.available())
-    {
-      // recv += (char)LoRa.read();
-      data[i] = (float)LoRa.read();
-      i++;
-    }
+    LoRa.readBytes((uint8_t*)data, 8*4);
     count++;
     display.clear();
     display.drawString(display.getWidth() / 2, display.getHeight() / 2, recv);
