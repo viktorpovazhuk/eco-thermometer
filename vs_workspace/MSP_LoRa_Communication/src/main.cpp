@@ -10,7 +10,7 @@
           P2.5        |  MISO  |
           P2.4        |  SCK   |
           P1.0        |  RESET |
-          P1.3        |  DIO0  |
+          P1.6        |  DIO0  |
 */
 
 int counter = 0;
@@ -21,7 +21,7 @@ void setup() {
 
   Serial.println("LoRa Sender");
 
-  LoRa.setPins(P3_1, P1_0, P1_3);
+  LoRa.setPins(P3_1, P1_0, P1_6);
 
   if (!LoRa.begin(433E6)) {
     Serial.println("Starting LoRa failed!");
