@@ -183,12 +183,12 @@ public:
     /////////////////////////////////////////////////////////////////
     /// Read the data from the BME280 in the specified unit.
     void read(
+        uint32_t *data,
         float &pressure,
         float &temperature,
         float &humidity,
         TempUnit tempUnit = TempUnit_Celsius,
-        PresUnit presUnit = PresUnit_hPa,
-        int32_t *data = NULL);
+        PresUnit presUnit = PresUnit_hPa);
 
     /*****************************************************************/
     /* ACCESSOR FUNCTIONS                                            */

@@ -82,7 +82,8 @@ bool BME280::InitializeFilter()
    WriteSettings();
 
    float dummy;
-   read(dummy, dummy, dummy);
+   uint32_t dummy2[8];
+   read(dummy2, dummy, dummy, dummy);
 
    m_settings.filter = filter;
 }
@@ -427,26 +428,26 @@ float BME280::hum()
 
 /****************************************************************/
 void BME280::read(
+    uint32_t *data,
     float &pressure,
     float &temp,
     float &humidity,
     TempUnit tempUnit,
-    PresUnit presUnit,
-    int32_t *data)
+    PresUnit presUnit)
 {
-   // int32_t data[8];
-   // int32_t t_fine;
-   if (!ReadData(data))
-   {
-      // pressure = temp = humidity = NAN;
-      return;
-   }
-   // uint32_t rawPressure = (data[0] << 12) | (data[1] << 4) | (data[2] >> 4);
-   // uint32_t rawTemp = (data[3] << 12) | (data[4] << 4) | (data[5] >> 4);
-   // uint32_t rawHumidity = (data[6] << 8) | data[7];
-   // temp = CalculateTemperature(rawTemp, t_fine, tempUnit);
-   // pressure = CalculatePressure(rawPressure, t_fine, presUnit);
-   // humidity = CalculateHumidity(rawHumidity, t_fine);
+   //int32_t data[8];
+   int32_t t_fine;
+   // if (!ReadData(data))
+   // {
+   //    pressure = temp = humidity = NAN;
+   //    return;
+   // }
+   uint32_t rawPressure = (data[0] << 12) | (data[1] << 4) | (data[2] >> 4);
+   uint32_t rawTemp = (data[3] << 12) | (data[4] << 4) | (data[5] >> 4);
+   uint32_t rawHumidity = (data[6] << 8) | data[7];
+   temp = CalculateTemperature(rawTemp, t_fine, tempUnit);
+   pressure = CalculatePressure(rawPressure, t_fine, presUnit);
+   humidity = CalculateHumidity(rawHumidity, t_fine);
 }
 
 /****************************************************************/
