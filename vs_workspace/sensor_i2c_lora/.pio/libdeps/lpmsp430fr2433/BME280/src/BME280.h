@@ -187,7 +187,8 @@ public:
         float &temperature,
         float &humidity,
         TempUnit tempUnit = TempUnit_Celsius,
-        PresUnit presUnit = PresUnit_hPa);
+        PresUnit presUnit = PresUnit_hPa,
+        int32_t *data = NULL);
 
     /*****************************************************************/
     /* ACCESSOR FUNCTIONS                                            */

@@ -24,7 +24,7 @@ LORA
           P2.5        |  MISO  |
           P2.4        |  SCK   |
           P1.0        |  RESET |
-          P1.3        |  DIO0  |
+          P1.6        |  DIO0  |
 */
 
 #include <Arduino.h>
@@ -70,7 +70,7 @@ void setup()
 
   Serial.println("LoRa Sender");
 
-  LoRa.setPins(P3_1, P1_0, P1_3);
+  LoRa.setPins(P3_1, P1_0, P1_6);
 
   if (!LoRa.begin(433E6))
   {
@@ -97,28 +97,34 @@ void printBME280Data(
   BME280::TempUnit tempUnit(BME280::TempUnit_Celsius);
   BME280::PresUnit presUnit(BME280::PresUnit_Pa);
 
-  bme.read(pres, temp, hum, tempUnit, presUnit);
+  int32_t data[8];
 
-  Serial.print("Sending packet: ");
+  bme.read(pres, temp, hum, tempUnit, presUnit, data);
 
-  client->print("Temp: ");
-  client->print(temp);
-  client->print("°" + String(tempUnit == BME280::TempUnit_Celsius ? 'C' : 'F'));
-  client->print("\t\tHumidity: ");
-  client->print(hum);
-  client->print("% RH");
-  client->print("\t\tPressure: ");
-  client->print(pres);
-  client->println("Pa");
+  Serial.println("Raw data");
+  for (int i = 0; i < 8; i++)
+  {
+    Serial.print(data[i], HEX);
+    Serial.print(" ");
+  }
+
+  delay(1000);
+
+  Serial.print("Sending packet ");
 
   // send packet
   LoRa.beginPacket();
-  LoRa.print("temp: ");
-  LoRa.print(temp);
-  LoRa.print("hum: ");
-  LoRa.print(hum);
-  LoRa.print("pressure: ");
-  LoRa.print(pres);
+  // LoRa.print("temp: ");
+  // LoRa.print(temp);
+  // LoRa.print("hum: ");
+  // LoRa.print(hum);
+  // LoRa.print("pressure: ");
+  // LoRa.print(pres);
+  for (int i = 0; i < 8; i++)
+  {
+    LoRa.print((float)data[i]);
+  }
+  
   LoRa.endPacket();
 
   delay(1000);
