@@ -20,9 +20,11 @@ BME280I2C bme; // Default : forced mode, standby time = 1000 ms
 void setup()
 {
   Serial.begin(115200);
-  while (!Serial);
+  while (!Serial)
+    ;
 
-  if (OLED_RST > 0) {
+  if (OLED_RST > 0)
+  {
     pinMode(OLED_RST, OUTPUT);
     digitalWrite(OLED_RST, HIGH);
     delay(100);
@@ -43,9 +45,11 @@ void setup()
   SPI.begin(CONFIG_CLK, CONFIG_MISO, CONFIG_MOSI, CONFIG_NSS);
   LoRa.setPins(CONFIG_NSS, CONFIG_RST, CONFIG_DIO0);
   Serial.println(String("BAND =") + BAND);
-  if (!LoRa.begin(BAND)) {
+  if (!LoRa.begin(BAND))
+  {
     Serial.println("Starting LoRa failed!");
-    while (1);
+    while (1)
+      ;
   }
   LoRa.setSyncWord(0xF3);
 }
@@ -54,10 +58,17 @@ int count = 0;
 
 void loop()
 {
-  if (LoRa.parsePacket()) {
+  uint32_t data[8];
+  int i = 0;
+
+  if (LoRa.parsePacket())
+  {
     String recv = "";
-    while (LoRa.available()) {
-      recv += (char)LoRa.read();
+    while (LoRa.available())
+    {
+      // recv += (char)LoRa.read();
+      data[i] = (float)LoRa.read();
+      i++;
     }
     count++;
     display.clear();
@@ -66,9 +77,7 @@ void loop()
     display.drawString(display.getWidth() / 2, display.getHeight() / 2 - 16, info);
     display.display();
   }
-  
-  uint32_t data[8];
-  
+
   printBME280Data(&Serial, data);
   delay(500);
 }
