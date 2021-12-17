@@ -190,6 +190,8 @@ public:
         TempUnit tempUnit = TempUnit_Celsius,
         PresUnit presUnit = PresUnit_hPa);
 
+    void setDig(uint8_t *out_dig);
+
     /*****************************************************************/
     /* ACCESSOR FUNCTIONS                                            */
     /*****************************************************************/

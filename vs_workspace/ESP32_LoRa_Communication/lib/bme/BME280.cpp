@@ -450,6 +450,11 @@ void BME280::read(
    humidity = CalculateHumidity(rawHumidity, t_fine);
 }
 
+void BME280::setDig(uint8_t *out_dig)
+{
+   memcpy(m_dig, out_dig, 32);
+}
+
 /****************************************************************/
 BME280::ChipModel BME280::chipModel()
 {

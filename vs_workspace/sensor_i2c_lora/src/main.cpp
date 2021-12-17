@@ -85,7 +85,8 @@ void setup()
 void loop()
 {
   printBME280Data(&Serial);
-  delay(500);
+
+  delay(2000);
 }
 
 //////////////////////////////////////////////////////////////////
@@ -133,6 +134,4 @@ void printBME280Data(
   LoRa.write((uint8_t *)out_dig, 32);
 
   LoRa.endPacket();
-
-  delay(1000);
 }

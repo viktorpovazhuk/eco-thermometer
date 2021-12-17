@@ -54,21 +54,19 @@ void setup()
   LoRa.setSyncWord(0xF3);
 }
 
-int count = 0;
-
 void loop()
 {
   uint32_t data[8];
-  int i = 0;
+  uint8_t m_dig[32];
 
   if (LoRa.parsePacket())
   {
-    String recv = "";
-    recv += LoRa.readString();
-    // LoRa.readBytes((uint8_t*)data, 8*4);
-    count++;
+    Serial.println("In parsePacket");
+
+    LoRa.readBytes((uint8_t *)data, 8 * 4);
+    LoRa.readBytes((uint8_t *)m_dig, 8 * 4);
+
     display.clear();
-    display.drawString(display.getWidth() / 2, display.getHeight() / 2, recv);
     String info = "RSSI = " + String(LoRa.packetRssi());
     display.drawString(display.getWidth() / 2, display.getHeight() / 2 - 16, info);
     display.display();
@@ -82,8 +80,11 @@ void loop()
   }
   Serial.println();
 
+  bme.setDig(m_dig);
+
   printBME280Data(&Serial, data);
-  delay(500);
+
+  delay(2000);
 }
 
 //////////////////////////////////////////////////////////////////
@@ -107,6 +108,4 @@ void printBME280Data(
   client->print("\t\tPressure: ");
   client->print(pres);
   client->println("Pa");
-
-  delay(1000);
 }
