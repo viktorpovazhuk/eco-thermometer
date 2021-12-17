@@ -19,7 +19,7 @@ BME280I2C bme; // Default : forced mode, standby time = 1000 ms
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
   while (!Serial)
     ;
 
