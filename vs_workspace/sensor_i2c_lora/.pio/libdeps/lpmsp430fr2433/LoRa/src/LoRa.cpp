@@ -831,9 +831,12 @@ uint8_t LoRaClass::singleTransfer(uint8_t address, uint8_t value)
 {
   uint8_t response;
 
-  digitalWrite(_ss, LOW);
+  //digitalWrite(_ss, LOW); // I commented this
 
   _spi->beginTransaction(_spiSettings);
+
+  digitalWrite(_ss, LOW); // I added this
+
   _spi->transfer(address);
   response = _spi->transfer(value);
   _spi->endTransaction();
