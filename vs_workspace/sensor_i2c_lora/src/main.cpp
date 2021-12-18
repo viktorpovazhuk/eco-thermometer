@@ -124,12 +124,7 @@ void printBME280Data(
 
   // send packet
   LoRa.beginPacket();
-  // LoRa.print("temp: ");
-  // LoRa.print(temp);
-  // LoRa.print("hum: ");
-  // LoRa.print(hum);
-  // LoRa.print("pressure: ");
-  // LoRa.print(pres);
+
   LoRa.write((uint8_t *)data, 8 * 4);
   LoRa.write((uint8_t *)out_dig, 32);
 

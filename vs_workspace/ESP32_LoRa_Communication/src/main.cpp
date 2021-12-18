@@ -11,9 +11,14 @@ OLED_CLASS_OBJ display(OLED_ADDRESS, OLED_SDA, OLED_SCL);
 
 #include "BME280I2C.h"
 
-void printBME280Data(
+void calculateBME280Data(
     Stream *client,
-    uint32_t *data);
+    uint32_t *data,
+    uint8_t *m_dig,
+    float &temp,
+    float& hum,
+    float& pres);
+    void printOnDisplay(String text);
 BME280I2C bme; // Default : forced mode, standby time = 1000 ms
 // Oversampling = pressure ×1, temperature ×1, humidity ×1, filter off,
 
@@ -66,46 +71,58 @@ void loop()
     LoRa.readBytes((uint8_t *)data, 8 * 4);
     LoRa.readBytes((uint8_t *)m_dig, 8 * 4);
 
-    display.clear();
-    String info = "RSSI = " + String(LoRa.packetRssi());
-    display.drawString(display.getWidth() / 2, display.getHeight() / 2 - 16, info);
-    display.display();
+    Serial.print("Raw data: ");
+    for (int i = 0; i < 8; i++)
+    {
+      Serial.print(data[i], HEX);
+      Serial.print(" ");
+    }
+    Serial.println();
+    
+    float temp(NAN), hum(NAN), pres(NAN);
+  
+    calculateBME280Data(&Serial, data, m_dig, temp, hum, pres);
+    
+    Serial.print("Temp: ");
+    Serial.print(temp);
+    Serial.print("°C");
+    Serial.print("\t\tHumidity: ");
+    Serial.print(hum);
+    Serial.print("% RH");
+    Serial.print("\t\tPressure: ");
+    Serial.print(pres);
+    Serial.println("Pa");
+    
+    printOnDisplay("temp = " + String(temp));
   }
+  
+  
 
-  Serial.print("Raw data: ");
-  for (int i = 0; i < 8; i++)
-  {
-    Serial.print(data[i], HEX);
-    Serial.print(" ");
-  }
-  Serial.println();
-
-  bme.setDig(m_dig);
-
-  printBME280Data(&Serial, data);
-
-  delay(2000);
+  delay(200);
 }
 
 //////////////////////////////////////////////////////////////////
-void printBME280Data(
+void calculateBME280Data(
     Stream *client,
-    uint32_t *data)
+    uint32_t *data,
+    uint8_t *m_dig,
+    float &temp,
+    float& hum,
+    float& pres)
 {
-  float temp(NAN), hum(NAN), pres(NAN);
-
   BME280::TempUnit tempUnit(BME280::TempUnit_Celsius);
   BME280::PresUnit presUnit(BME280::PresUnit_Pa);
+  
+  bme.setDig(m_dig);
 
   bme.read(data, pres, temp, hum, tempUnit, presUnit);
 
-  client->print("Temp: ");
-  client->print(temp);
-  client->print("°" + String(tempUnit == BME280::TempUnit_Celsius ? 'C' : 'F'));
-  client->print("\t\tHumidity: ");
-  client->print(hum);
-  client->print("% RH");
-  client->print("\t\tPressure: ");
-  client->print(pres);
-  client->println("Pa");
+  
+}
+
+void printOnDisplay(String text) {
+  display.clear();
+  // String info = "RSSI = " + String(LoRa.packetRssi());
+  display.drawString(display.getWidth() / 2, display.getHeight() / 2 - 16, text);
+  display.display();
 }
