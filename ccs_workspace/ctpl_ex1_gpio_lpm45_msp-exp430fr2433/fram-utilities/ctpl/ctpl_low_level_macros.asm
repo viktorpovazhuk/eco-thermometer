@@ -221,7 +221,7 @@ lpmDebug_return:
 FRWPPW  .set    0
     .endif
 
-ctpl_stateFRAM  .usect ".TI.persistent",2,2
+ctpl_stateFRAM  .usect ".TI.asm_persistent",2,2
 
 ; Macro for unlocking FRAM.
 unlockFRAM  .macro

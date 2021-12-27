@@ -4,7 +4,18 @@
 4. find designs for entering lpm -> try
 5. ask
 
+----------------------------------
+1. read about adc
+2. change voltage
+3. read value from adc -> understand how functions work +
+4. can't get printf work -> uart -> don't use simple things that you would rewrite later!!!
+5. find clock src in ds - read freq -> calc params
+configure clk to freq -> use driverlib -> read docs - tutorial -> use initial f = 1MHz for DCO, read in guide later +
+check adress +
+connect USCI0 to usb
 
+
+6. found example in folder
 
 
 

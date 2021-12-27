@@ -134,6 +134,7 @@ SECTIONS
        GROUP(READ_WRITE_MEMORY)
        {
           .TI.persistent : {}                /* For #pragma persistent            */
+          .TI.asm_persistent : {}
        }
 
        GROUP(READ_ONLY_MEMORY)

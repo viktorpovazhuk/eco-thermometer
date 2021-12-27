@@ -16,9 +16,9 @@ void calculateBME280Data(
     uint32_t *data,
     uint8_t *m_dig,
     float &temp,
-    float& hum,
-    float& pres);
-    void printOnDisplay(String text);
+    float &hum,
+    float &pres);
+void printOnDisplay(String text);
 BME280I2C bme; // Default : forced mode, standby time = 1000 ms
 // Oversampling = pressure ×1, temperature ×1, humidity ×1, filter off,
 
@@ -78,11 +78,11 @@ void loop()
       Serial.print(" ");
     }
     Serial.println();
-    
+
     float temp(NAN), hum(NAN), pres(NAN);
-  
+
     calculateBME280Data(&Serial, data, m_dig, temp, hum, pres);
-    
+
     Serial.print("Temp: ");
     Serial.print(temp);
     Serial.print("°C");
@@ -92,11 +92,10 @@ void loop()
     Serial.print("\t\tPressure: ");
     Serial.print(pres);
     Serial.println("Pa");
-    
+
     printOnDisplay("temp = " + String(temp));
+    // printOnDisplay(";)");
   }
-  
-  
 
   delay(200);
 }
@@ -107,20 +106,19 @@ void calculateBME280Data(
     uint32_t *data,
     uint8_t *m_dig,
     float &temp,
-    float& hum,
-    float& pres)
+    float &hum,
+    float &pres)
 {
   BME280::TempUnit tempUnit(BME280::TempUnit_Celsius);
   BME280::PresUnit presUnit(BME280::PresUnit_Pa);
-  
+
   bme.setDig(m_dig);
 
   bme.read(data, pres, temp, hum, tempUnit, presUnit);
-
-  
 }
 
-void printOnDisplay(String text) {
+void printOnDisplay(String text)
+{
   display.clear();
   // String info = "RSSI = " + String(LoRa.packetRssi());
   display.drawString(display.getWidth() / 2, display.getHeight() / 2 - 16, text);

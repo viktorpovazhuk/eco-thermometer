@@ -25,17 +25,17 @@ CTPL_STATE_VALID        .set    0xa596
 CTPL_STATE_INVALID      .set    0x0000
 
 ; FRAM stack copy
-ctpl_stackCopy      .usect ".TI.persistent",CTPL_STACK_SIZE,2
+ctpl_stackCopy      .usect ".TI.asm_persistent",CTPL_STACK_SIZE,2
 
 ; RAM copy
     .if $defined(CTPL_RAM_SIZE)
-ctpl_ramCopy        .usect ".TI.persistent",CTPL_RAM_SIZE,2
+ctpl_ramCopy        .usect ".TI.asm_persistent",CTPL_RAM_SIZE,2
     .endif
 
 ; Low level state variables
-ctpl_mode           .usect ".TI.persistent",2,2
-ctpl_state          .usect ".TI.persistent",2,2
-ctpl_stackUsage     .usect ".TI.persistent",2,2
+ctpl_mode           .usect ".TI.asm_persistent",2,2
+ctpl_state          .usect ".TI.asm_persistent",2,2
+ctpl_stackUsage     .usect ".TI.asm_persistent",2,2
 
 ; Global symbols
     .global __STACK_END
