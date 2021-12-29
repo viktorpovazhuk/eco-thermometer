@@ -59,16 +59,21 @@
 //! vector table.
 //! - USCI_A0_VECTOR.
 //******************************************************************************
+
 #include "driverlib.h"
 #include "Board.h"
-#include <stdio.h>
-#include <uartlib/uartlib.h>
+#include "uartlib.h"
+#include "stdio.h"
 
 #define STR_LEN 100
 
 char str[STR_LEN];
 uint8_t RXData = 0;
 uint8_t check = 0;
+
+void initClocks(void);
+void initGpio(void);
+
 
 void main(void)
 {
@@ -79,13 +84,11 @@ void main(void)
 
     initGpio();
 
-    /*
-     * Disable the GPIO power-on default high-impedance mode to activate
-     * previously configured port settings
-     */
-    PMM_unlockLPM5();
-
+    // clocks should be initialized
+    // appropriately
     initUart();
+
+    PMM_unlockLPM5();
 
     // Enable global interrupts
     __enable_interrupt();
@@ -102,72 +105,13 @@ void main(void)
     return;
 }
 
-void initUart(void) {
-    //Configure UART
-    //SMCLK = 1MHz, Baudrate = 115200
-    //UCBRx = 8, UCBRFx = 0, UCBRSx = 0xD6, UCOS16 = 0
-    EUSCI_A_UART_initParam param = {0};
-    param.selectClockSource = EUSCI_A_UART_CLOCKSOURCE_SMCLK;
-    param.clockPrescalar = 8;
-    param.firstModReg = 0;
-    param.secondModReg = 0xD6;
-    param.parity = EUSCI_A_UART_NO_PARITY;
-    param.msborLsbFirst = EUSCI_A_UART_LSB_FIRST;
-    param.numberofStopBits = EUSCI_A_UART_ONE_STOP_BIT;
-    param.uartMode = EUSCI_A_UART_MODE;
-    param.overSampling = EUSCI_A_UART_LOW_FREQUENCY_BAUDRATE_GENERATION;
-
-    if (STATUS_FAIL == EUSCI_A_UART_init(EUSCI_A0_BASE, &param)) {
-        printf("Init failedn\n");
-        return;
-
-    }
-
-    EUSCI_A_UART_enable(EUSCI_A0_BASE);
-
-    EUSCI_A_UART_clearInterrupt(EUSCI_A0_BASE,
-        EUSCI_A_UART_RECEIVE_INTERRUPT);
-
-    // Enable USCI_A0 RX interrupt
-    EUSCI_A_UART_enableInterrupt(EUSCI_A0_BASE,
-        EUSCI_A_UART_RECEIVE_INTERRUPT);
-}
-
-void sendUartMsg(char* str) {
-    uint8_t i;
-    uint8_t length = stringLength(str);
-    char curChar;
-
-    for (i = 0; i < length; ++i) {
-
-        curChar = str[i];
-
-        //need to print first symbol correctly
-        _delay_cycles(10000);
-
-        // Load data onto buffer
-        EUSCI_A_UART_transmitData(EUSCI_A0_BASE, curChar);
-
-    }
-}
-
-uint8_t stringLength(char* str) {
-    uint8_t i = 0;
-
-    while (str[i] != '\0') {
-        i++;
-    }
-
-    return i;
-}
-
 void initClocks(void) {
     //Set ACLK = REFOCLK with clock divider of 1
-        CS_initClockSignal(CS_ACLK,CS_REFOCLK_SELECT,CS_CLOCK_DIVIDER_1);
-        //Set SMCLK = DCO with frequency divider of 1
-        CS_initClockSignal(CS_SMCLK,CS_DCOCLKDIV_SELECT,CS_CLOCK_DIVIDER_1);
-        //Set MCLK = DCO with frequency divider of 1
-        CS_initClockSignal(CS_MCLK,CS_DCOCLKDIV_SELECT,CS_CLOCK_DIVIDER_1);
+    CS_initClockSignal(CS_ACLK,CS_REFOCLK_SELECT,CS_CLOCK_DIVIDER_1);
+    //Set SMCLK = DCO with frequency divider of 1
+    CS_initClockSignal(CS_SMCLK,CS_DCOCLKDIV_SELECT,CS_CLOCK_DIVIDER_1);
+    //Set MCLK = DCO with frequency divider of 1
+    CS_initClockSignal(CS_MCLK,CS_DCOCLKDIV_SELECT,CS_CLOCK_DIVIDER_1);
 }
 
 void initGpio(void) {

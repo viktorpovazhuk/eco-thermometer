@@ -6739,3 +6739,180 @@ Binding(ALT+E,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.tm.terminal.TerminalContext,,,system)
+!SESSION 2021-12-29 07:14:56.675 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-12-29 07:14:59.119
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-12-29 07:14:59.122
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-12-29 07:15:09.302
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-12-29 07:15:10.399
+!MESSAGE CCS HTTP adapter started! [ccs.port:39241] - Open 'http://localhost:39241/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-29 07:16:51.459
+!MESSAGE Indexed 'lora_test' (1 sources, 5 headers) in 0.412 sec: 548 declarations; 1,098 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-29 07:27:29.504
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-29 07:27:29.508
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-29 07:27:29.510
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.help 4 0 2021-12-29 08:57:06.897
+!MESSAGE Error reading context-sensitive help file /"com.ti.ccstudio.usersguide.doc/context_files/contexts_Workbench.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.context.ContextFileProvider.loadContexts(ContextFileProvider.java:204)
+	at org.eclipse.help.internal.context.ContextFileProvider.getContexts(ContextFileProvider.java:185)
+	at org.eclipse.help.internal.context.ContextFileProvider.getPluginContexts(ContextFileProvider.java:162)
+	at org.eclipse.help.internal.context.ContextFileProvider.getContext(ContextFileProvider.java:88)
+	at org.eclipse.help.internal.context.ContextManager.getContext(ContextManager.java:69)
+	at org.eclipse.help.HelpSystem.getContext(HelpSystem.java:52)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:102)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:157)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1436)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1225)
+	at org.eclipse.jface.dialogs.TrayDialog.helpPressed(TrayDialog.java:373)
+	at org.eclipse.jface.dialogs.TrayDialog.lambda$0(TrayDialog.java:277)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.dialogs.ElementTreeSelectionDialog.open(ElementTreeSelectionDialog.java:241)
+	at com.ti.ccstudio.project.ui.internal.properties.XSelectPathInputDialog$1.widgetSelected(XSelectPathInputDialog.java:267)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at com.ti.ccstudio.project.ui.internal.properties.temp.FileListControl.getNewInputObject(FileListControl.java:760)
+	at com.ti.ccstudio.project.ui.internal.properties.temp.FileListControl.addPressed(FileListControl.java:527)
+	at com.ti.ccstudio.project.ui.internal.properties.temp.FileListControl.access$6(FileListControl.java:525)
+	at com.ti.ccstudio.project.ui.internal.properties.temp.FileListControl$4.widgetSelected(FileListControl.java:496)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:153)
+	at org.eclipse.ui.internal.ide.actions.ProjectPropertyDialogAction.run(ProjectPropertyDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)

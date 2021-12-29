@@ -5,7 +5,7 @@
    <string>defaultSolution</string>
    <void method="set">
     <object idref="SolutionManager$PersistState0"/>
-    <string>/home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/dvt/AnalysisSolutionsTemp/AnalysisSolution1640522129407/null</string>
+    <string>/home/vityha/ti/ccs1100/ccs/ccs_base/dvt_4.1.0.202106281057/CodeGen/solutions/CodeGenCoverage</string>
    </void>
   </void>
  </object>
@@ -14,10 +14,10 @@
  <void id="ArrayList0" method="get">
   <object idref="SolutionManager$PersistState0"/>
   <void method="add">
-   <string>/home/vityha/ti/ccs1100/ccs/ccs_base/dvt_4.1.0.202106281057/CodeGen/solutions/CodeGenCoverage</string>
+   <string>/home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/dvt/AnalysisSolutionsTemp/AnalysisSolution1640604282614/null</string>
   </void>
   <void method="add">
-   <string>/home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/dvt/AnalysisSolutionsTemp/AnalysisSolution1640522129407/null</string>
+   <string>/home/vityha/ti/ccs1100/ccs/ccs_base/dvt_4.1.0.202106281057/CodeGen/solutions/CodeGenCoverage</string>
   </void>
  </void>
 </void>
