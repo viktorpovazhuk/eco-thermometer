@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1640776591683_1" label="lora_src" name="lora_src">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/lora_test/LoRa/src" type="2"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1636739679008_0" label="Window Working Set" name="Aggregate for window 1636739679008"/>
 </workingSetManager>
