@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="USCI_A0"/>
+		<item key="selection" value=".."/>
 		<list key="findhistory">
+			<item value="."/>
+			<item value="esp_types"/>
+			<item value="уіз_ензуі"/>
+			<item value=".."/>
 			<item value="USCI_A1"/>
 			<item value="EUSCI_A_UART_CLOCKSOURCE_SMCLK"/>
 			<item value="USCI_A0"/>
@@ -19,6 +23,8 @@
 			<item value="&amp;amp;"/>
 		</list>
 		<list key="replacehistory">
+			<item value=".."/>
+			<item value="."/>
 			<item value="USCI_A0"/>
 			<item value="USCI_A1"/>
 			<item value=".TI.asm_persistent"/>
@@ -26,8 +32,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="969"/>
-		<item key="DIALOG_Y_ORIGIN" value="171"/>
+		<item key="DIALOG_X_ORIGIN" value="1309"/>
+		<item key="DIALOG_Y_ORIGIN" value="210"/>
 		<item key="DIALOG_WIDTH" value="348"/>
 		<item key="DIALOG_HEIGHT" value="437"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>

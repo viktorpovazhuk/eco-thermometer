@@ -6916,3 +6916,195 @@ java.io.FileNotFoundException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SESSION 2021-12-30 13:11:32.915 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-12-30 13:11:34.507
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-12-30 13:11:34.510
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-12-30 13:11:41.315
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-12-30 13:11:41.557
+!MESSAGE CCS HTTP adapter started! [ccs.port:45337] - Open 'http://localhost:45337/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-30 13:26:21.697
+!MESSAGE Indexed 'esp_lora_test' (40 sources, 1,773 headers) in 13.6 sec: 82,349 declarations; 104,137 references; 327 unresolved inclusions; 550 syntax errors; 9,013 unresolved names (4.6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-30 13:32:06.980
+!MESSAGE Indexed 'lora_test' (1 sources, 5 headers) in 0.075 sec: 548 declarations; 1,098 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-30 13:37:24.389
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-30 13:37:24.394
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-30 13:38:00.236
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-30 14:16:54.158
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-30 14:16:54.159
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-30 14:23:16.050
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-12-30 14:23:16.051
+!MESSAGE Could not set property: ccs associatedFiles. Value is too long.
+!STACK 0
+java.lang.Exception: Could not set property: ccs associatedFiles. Value is too long.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.properties.PropertyManager2.setProperty(PropertyManager2.java:172)
+	at org.eclipse.core.internal.resources.Resource.setPersistentProperty(Resource.java:1684)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.associateFileWithContext(CoffErrorParser.java:451)
+	at com.ti.ccstudio.errorparser.parsers.ErrorPattern.recordError(ErrorPattern.java:121)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.processPendingMesg(CoffErrorParser.java:260)
+	at com.ti.ccstudio.errorparser.parsers.CoffErrorParser.doProcessLine(CoffErrorParser.java:112)
+	at com.ti.ccstudio.errorparser.parsers.BaseErrorParser.processLine(BaseErrorParser.java:326)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:369)
+	at com.ti.ccstudio.project.core.internal.build.temp.XErrorParserManager.processLine(XErrorParserManager.java:55)
+	at org.eclipse.cdt.core.ErrorParserManager.checkLine(ErrorParserManager.java:710)
+	at org.eclipse.cdt.core.ErrorParserManager.write(ErrorParserManager.java:694)
+	at org.eclipse.cdt.internal.core.StreamProgressMonitor.write(StreamProgressMonitor.java:105)
+	at java.base/java.io.OutputStream.write(Unknown Source)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.flushBufferedErrors(ProcessClosure.java:256)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$SynchronizedOutputStream.write(ProcessClosure.java:207)
+	at com.ti.ccstudio.project.core.internal.build.temp.ProcessClosure$ReaderThread.run(ProcessClosure.java:78)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-30 16:05:28.845
+!MESSAGE Indexed 'lora_test_2' (1 sources, 5 headers) in 0.057 sec: 548 declarations; 1,098 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)

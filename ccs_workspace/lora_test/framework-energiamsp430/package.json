@@ -1,0 +1,12 @@
+{
+  "name": "framework-energiamsp430",
+  "version": "1.10810.210219",
+  "description": "Energia Wiring-based Framework for Texas Instruments MSP430 microcontrollers",
+  "keywords": [
+    "framework",
+    "wiring",
+    "texas instruments",
+    "msp430"
+  ],
+  "homepage": "http://energia.nu/reference/"
+}

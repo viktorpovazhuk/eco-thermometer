@@ -112,11 +112,4 @@ PDE_DEPS__QUOTED :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-LoRa/src \
-framework-arduinoespressif32/cores/esp32 \
-framework-arduinoespressif32/cores/esp32/libb64 \
-framework-arduinoespressif32/libraries/SPI/src \
-framework-arduinoespressif32/tools \
-framework-arduinoespressif32/tools/sdk/ld \
-framework-arduinoespressif32/tools/sdk/lib \
 

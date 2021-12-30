@@ -1,0 +1,1 @@
+1. added #define F_CPU 8000000L in Energia.h: from boards.txt
