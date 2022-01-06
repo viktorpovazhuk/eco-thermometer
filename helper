@@ -1,3 +1,25 @@
+1. spi: example -> source explorer -> driverlib +
+2. c funcs in c++ file +
+3. main.cpp +
+4. test signal
+5. a) test analyzer connection +
+b) fix code -> read about function -> refactor code -> change to UCA1 +
+6. look for usage in example: need to receive? +
+7. check what funcs needed in lora -> rewrite spi class
+
+
+
+
+
+
+1. try to find lora lib in net
+2. explorer
+3. read how other import to ccs
+
+
+---------------------------------------
+
+
 1. try fram app +
 2. what is lpm4.5 +
 3. read part about interrupts +
@@ -17,7 +39,7 @@ connect USCI0 to usb
 
 6. found example in folder
 
-
+-----------------------------------------
 
 
 

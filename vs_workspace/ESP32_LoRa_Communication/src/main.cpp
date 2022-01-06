@@ -64,12 +64,14 @@ void loop()
   uint32_t data[8];
   uint8_t m_dig[32];
 
+  Serial.println("In loop");
+
   if (LoRa.parsePacket())
   {
     Serial.println("In parsePacket");
 
     LoRa.readBytes((uint8_t *)data, 8 * 4);
-    LoRa.readBytes((uint8_t *)m_dig, 8 * 4);
+    // LoRa.readBytes((uint8_t *)m_dig, 8 * 4);
 
     Serial.print("Raw data: ");
     for (int i = 0; i < 8; i++)
