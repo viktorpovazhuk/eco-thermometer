@@ -7108,3 +7108,351 @@ java.lang.Exception: Could not set property: ccs associatedFiles. Value is too l
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-12-30 16:05:28.845
 !MESSAGE Indexed 'lora_test_2' (1 sources, 5 headers) in 0.057 sec: 548 declarations; 1,098 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2021-12-30 17:01:17.720
+!MESSAGE REX Launching REX 4.1 (online)
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2021-12-30 17:01:20.607
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop
+!SESSION 2022-01-01 13:33:39.763 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-01-01 13:33:41.415
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-01-01 13:33:41.418
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-01-01 13:33:48.201
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-01-01 13:33:48.472
+!MESSAGE CCS HTTP adapter started! [ccs.port:36655] - Open 'http://localhost:36655/ide' in web browser to see listing of available APIs...
+!SESSION 2022-01-02 18:59:04.838 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-01-02 18:59:06.385
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-01-02 18:59:06.388
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-01-02 18:59:13.017
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-01-02 18:59:13.327
+!MESSAGE CCS HTTP adapter started! [ccs.port:45127] - Open 'http://localhost:45127/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.help 4 0 2022-01-02 19:06:02.577
+!MESSAGE Error reading context-sensitive help file /"com.ti.ccstudio.usersguide.doc/context_files/contexts_Workbench.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.context.ContextFileProvider.loadContexts(ContextFileProvider.java:204)
+	at org.eclipse.help.internal.context.ContextFileProvider.getContexts(ContextFileProvider.java:185)
+	at org.eclipse.help.internal.context.ContextFileProvider.getPluginContexts(ContextFileProvider.java:162)
+	at org.eclipse.help.internal.context.ContextFileProvider.getContext(ContextFileProvider.java:88)
+	at org.eclipse.help.internal.context.ContextManager.getContext(ContextManager.java:69)
+	at org.eclipse.help.HelpSystem.getContext(HelpSystem.java:52)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:102)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:157)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1436)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1225)
+	at org.eclipse.jface.dialogs.TrayDialog.helpPressed(TrayDialog.java:373)
+	at org.eclipse.jface.dialogs.TrayDialog.lambda$0(TrayDialog.java:277)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.handlers.WizardHandler$Import.executeHandler(WizardHandler.java:153)
+	at org.eclipse.ui.internal.handlers.WizardHandler.execute(WizardHandler.java:283)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:389)
+	at org.eclipse.ui.internal.actions.CommandAction.runWithEvent(CommandAction.java:142)
+	at org.eclipse.ui.internal.actions.CommandAction.run(CommandAction.java:152)
+	at org.eclipse.ui.actions.ImportResourcesAction.run(ImportResourcesAction.java:100)
+	at org.eclipse.ui.actions.BaseSelectionListenerAction.runWithEvent(BaseSelectionListenerAction.java:171)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-01-02 19:15:13.085
+!MESSAGE Indexed 'msp430_MSP-EXP430FR2433LP_SPI' (5 sources, 10 headers) in 0.554 sec: 729 declarations; 3,087 references; 5 unresolved inclusions; 0 syntax errors; 212 unresolved names (5.3%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-01-02 19:15:14.353
+!MESSAGE Indexed 'msp430_MSP-EXP430FR2433LP_core' (42 sources, 61 headers) in 1.26 sec: 5,061 declarations; 12,073 references; 38 unresolved inclusions; 4 syntax errors; 657 unresolved names (3.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-01-02 19:15:14.388
+!MESSAGE Indexed 'sketch_jan02a' (1 sources, 4 headers) in 0.032 sec: 114 declarations; 134 references; 1 unresolved inclusions; 0 syntax errors; 22 unresolved names (8.1%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-01-02 19:25:41.992
+!MESSAGE Indexed 'lora_test_3' (1 sources, 5 headers) in 0.086 sec: 548 declarations; 1,098 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2022-01-02 19:33:26.196
+!MESSAGE REX Launching REX 4.1 (online)
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2022-01-02 19:33:28.917
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-01-02 19:36:16.421
+!MESSAGE Indexed 'calendar_tamper_detect_gui_ccs' (45 sources, 90 headers) in 1.03 sec: 2,819 declarations; 7,203 references; 0 unresolved inclusions; 5 syntax errors; 24 unresolved names (0.24%)
+!SESSION 2022-01-02 21:12:45.599 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-01-02 21:12:47.893
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-01-02 21:12:47.896
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-01-02 21:12:56.690
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-01-02 21:12:57.330
+!MESSAGE CCS HTTP adapter started! [ccs.port:46011] - Open 'http://localhost:46011/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.cdt.core 4 0 2022-01-02 21:19:19.784
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at com.ti.common.project.core.internal.settings.AConfigurationSettings.<init>(AConfigurationSettings.java:178)
+	at com.ti.ccstudio.project.core.internal.settings.CCSConfigurationSettings.<init>(CCSConfigurationSettings.java:53)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.getCodegenVersion(ProjectCoreUtils.java:711)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.getCodegenVersion(ProjectCoreUtils.java:704)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.getCodegenVersion(ProjectCoreUtils.java:697)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.isUsingTIToolChain(ProjectCoreUtils.java:768)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.getTICompilerTool(ProjectCoreUtils.java:1436)
+	at com.ti.ccstudio.project.core.internal.build.CCSMakefileGenerator.doInitialize(CCSMakefileGenerator.java:277)
+	at com.ti.ccstudio.project.core.internal.build.CCSMakefileGenerator.initialize(CCSMakefileGenerator.java:252)
+	at org.eclipse.cdt.managedbuilder.internal.core.Builder.getDefaultBuildPath(Builder.java:1805)
+	at org.eclipse.cdt.managedbuilder.internal.core.Builder.getBuildPath(Builder.java:1775)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildBuildData.getBuilderCWD(BuildBuildData.java:42)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultBuildData.copySettingsFrom(CDefaultBuildData.java:56)
+	at org.eclipse.cdt.internal.core.settings.model.CBuildSettingCache.<init>(CBuildSettingCache.java:45)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyBuildData(CConfigurationDescriptionCache.java:247)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:110)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:154)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:510)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:240)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:427)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:409)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:403)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:396)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:78)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1070)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getBuildConfiguration(ProjectIndexerInputAdapter.java:160)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getScannerInfo(AbstractIndexerTask.java:1030)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:909)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:96)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-01-02 21:19:19.810
+!MESSAGE An internal error occurred during: "C/C++ Indexer".
+!STACK 0
+java.lang.NullPointerException
+	at com.ti.common.project.core.internal.settings.AConfigurationSettings.<init>(AConfigurationSettings.java:178)
+	at com.ti.ccstudio.project.core.internal.settings.CCSConfigurationSettings.<init>(CCSConfigurationSettings.java:53)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.getCodegenVersion(ProjectCoreUtils.java:711)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.getCodegenVersion(ProjectCoreUtils.java:704)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.getCodegenVersion(ProjectCoreUtils.java:697)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.isUsingTIToolChain(ProjectCoreUtils.java:768)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.getTICompilerTool(ProjectCoreUtils.java:1436)
+	at com.ti.ccstudio.project.core.internal.build.CCSMakefileGenerator.doInitialize(CCSMakefileGenerator.java:277)
+	at com.ti.ccstudio.project.core.internal.build.CCSMakefileGenerator.initialize(CCSMakefileGenerator.java:252)
+	at org.eclipse.cdt.managedbuilder.internal.core.Builder.getDefaultBuildPath(Builder.java:1805)
+	at org.eclipse.cdt.managedbuilder.internal.core.Builder.getBuildPath(Builder.java:1775)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildBuildData.getBuilderCWD(BuildBuildData.java:42)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultBuildData.copySettingsFrom(CDefaultBuildData.java:56)
+	at org.eclipse.cdt.internal.core.settings.model.CBuildSettingCache.<init>(CBuildSettingCache.java:45)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyBuildData(CConfigurationDescriptionCache.java:247)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:110)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:154)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:510)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:240)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:427)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:409)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:403)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:396)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:78)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1070)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getBuildConfiguration(ProjectIndexerInputAdapter.java:160)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getScannerInfo(AbstractIndexerTask.java:1030)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:909)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:96)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2022-01-03 17:14:33.619 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-01-03 17:14:35.223
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-01-03 17:14:35.226
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-01-03 17:14:42.853
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-01-03 17:14:43.477
+!MESSAGE CCS HTTP adapter started! [ccs.port:46287] - Open 'http://localhost:46287/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-01-03 17:39:26.189
+!MESSAGE Indexed 'spi_test' (25 sources, 53 headers) in 0.765 sec: 2,647 declarations; 9,182 references; 0 unresolved inclusions; 3 syntax errors; 4 unresolved names (0.034%)
+!SESSION 2022-01-04 16:38:30.632 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-01-04 16:38:32.246
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-01-04 16:38:32.249
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-01-04 16:38:39.767
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-01-04 16:38:40.460
+!MESSAGE CCS HTTP adapter started! [ccs.port:44163] - Open 'http://localhost:44163/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-01-04 17:10:15.631
+!MESSAGE DS_ERROR: MSP430: Error initializing emulator: No USB FET was found
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-01-04 17:10:15.929
+!MESSAGE DS_ERROR: Error initializing emulator:
+No USB FET was found
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-01-04 22:40:58.849
+!MESSAGE DS_ERROR: MSP430: JTAG Communication Error 
+
+
+!ENTRY org.eclipse.jface 2 0 2022-01-05 10:59:54.207
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-01-05 10:59:54.208
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7aea88,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19b6e2b3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-01-05 11:46:08.677
+!MESSAGE DS_ERROR: MSP430: JTAG Communication Error 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-01-05 13:16:22.995
+!MESSAGE DS_ERROR: MSP430: JTAG Communication Error 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-01-05 16:09:01.241
+!MESSAGE DS_ERROR: MSP430: JTAG Communication Error 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-01-05 19:25:44.947
+!MESSAGE DS_ERROR: MSP430: JTAG Communication Error 
+

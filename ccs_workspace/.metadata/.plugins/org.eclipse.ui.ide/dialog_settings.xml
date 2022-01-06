@@ -18,7 +18,7 @@
 	<section name="ExternalProjectImportWizard">
 	</section>
 	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
-		<item key="SELECTED_FILTER_GROUP" value="Errors/Warnings on Project"/>
+		<item key="SELECTED_FILTER_GROUP" value="add_arduino_lib"/>
 		<list key="PREV_SELECTED_ELEMENTS">
 		</list>
 	</section>

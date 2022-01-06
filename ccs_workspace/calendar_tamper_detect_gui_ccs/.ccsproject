@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="11.0.0"/>
+	<deviceVariant value="MSP430FR2433"/>
+	<deviceFamily value="MSP430"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="21.6.0.LTS"/>
+	<isElfFormat value="true"/>
+	<linkerCommandFile value="lnk_msp430fr2433.cmd"/>
+	<rts value="libc.a"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=calendar_tamper_detect_gui_ccs.projectspec.calendar_tamper_detect_gui_ccs"/>
+	<origin value="/home/vityha/ti/housekeeping_example_pack_1_00_08/examples/calendar_tamper_detect/ccs_gui/calendar_tamper_detect_gui_ccs.projectspec"/>
+	<filesToOpen value=""/>
+</projectOptions>

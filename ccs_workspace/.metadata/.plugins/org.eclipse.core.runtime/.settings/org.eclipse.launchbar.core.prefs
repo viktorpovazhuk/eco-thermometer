@@ -2,7 +2,7 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:ctpl_ex1_gpio_lpm45_msp-exp430fr2433,org.eclipse.launchbar.core.descriptorType.default\:eusci_b_i2c_ex1_masterRxMultiple,org.eclipse.launchbar.core.descriptorType.default\:lab_02a_ccs,org.eclipse.launchbar.core.descriptorType.default\:lab_02b_blink,org.eclipse.launchbar.core.descriptorType.default\:lab_03a_gpio,org.eclipse.launchbar.core.descriptorType.default\:msp430fr2433_gc_simple_json,org.eclipse.launchbar.core.descriptorType.default\:sensor,org.eclipse.launchbar.core.descriptorType.default\:uart_test,org.eclipse.launchbar.core.descriptorType.default\:i2c_test
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:ctpl_ex1_gpio_lpm45_msp-exp430fr2433,org.eclipse.launchbar.core.descriptorType.default\:eusci_b_i2c_ex1_masterRxMultiple,org.eclipse.launchbar.core.descriptorType.default\:lab_02a_ccs,org.eclipse.launchbar.core.descriptorType.default\:lab_02b_blink,org.eclipse.launchbar.core.descriptorType.default\:lab_03a_gpio,org.eclipse.launchbar.core.descriptorType.default\:msp430fr2433_gc_simple_json,org.eclipse.launchbar.core.descriptorType.default\:sensor,org.eclipse.launchbar.core.descriptorType.default\:i2c_test,org.eclipse.launchbar.core.descriptorType.default\:uart_test,org.eclipse.launchbar.core.descriptorType.default\:spi_test,org.eclipse.launchbar.core.descriptorType.default\:lora_test_3
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:ctpl_ex1_gpio_lpm45_msp-exp430fr2433/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:ctpl_ex1_gpio_lpm45_msp-exp430fr2433/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
@@ -14,4 +14,5 @@ org.eclipse.launchbar.core.descriptorType.default\:lab_02b_blink/activeLaunchMod
 org.eclipse.launchbar.core.descriptorType.default\:lab_02b_blink/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:lab_03a_gpio/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:lab_03a_gpio/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:spi_test/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:uart_test/activeLaunchMode=run

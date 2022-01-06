@@ -1,3 +1,6 @@
-2021/12/26-10:15:33.699 2327 Reusing MANIFEST /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/.jxbrowser.userdata/Default/Local Storage/leveldb/MANIFEST-000001
-2021/12/26-10:15:33.699 2327 Recovering log #4
-2021/12/26-10:15:33.700 2327 Reusing old log /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/.jxbrowser.userdata/Default/Local Storage/leveldb/000004.log 
+2022/01/02-19:33:27.213 1cda Reusing MANIFEST /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/.jxbrowser.userdata/Default/Local Storage/leveldb/MANIFEST-000001
+2022/01/02-19:33:27.214 1cda Recovering log #4
+2022/01/02-19:33:27.214 1cda Reusing old log /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace/.jxbrowser.userdata/Default/Local Storage/leveldb/000004.log 
+2022/01/02-19:39:23.239 1f24 Level-0 table #8: started
+2022/01/02-19:39:23.241 1f24 Level-0 table #8: 16831 bytes OK
+2022/01/02-19:39:23.242 1f24 Delete type=0 #4

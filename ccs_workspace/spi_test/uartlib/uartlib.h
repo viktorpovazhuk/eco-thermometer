@@ -1,0 +1,22 @@
+/*
+ * uart_lib.h
+ *
+ *  Created on: Dec 26, 2021
+ *      Author: vityha
+ */
+
+
+
+#ifndef UARTLIB_UARTLIB_H_
+#define UARTLIB_UARTLIB_H_
+
+#include "driverlib.h"
+#include "Board.h"
+
+void initUart(void);
+void sendUartMsg(char* str);
+uint8_t stringLength(char* str);
+
+
+
+#endif /* UARTLIB_UARTLIB_H_ */
