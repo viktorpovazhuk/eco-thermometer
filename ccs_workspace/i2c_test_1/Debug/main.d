@@ -60,6 +60,7 @@ main.obj: /home/vityha/Documents/Ð£ÐÐ£/POC/nonvolatile_thermometer/ccs_wo
 main.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/libcxx/stdio.h
 main.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/stdio.h
 main.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/stdarg.h
+main.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/libcxx/stdio.h
 
 ../main.cpp:
 
@@ -180,4 +181,6 @@ main.obj: /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/in
 /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/stdio.h:
 
 /home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/stdarg.h:
+
+/home/vityha/ti/ccs1100/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/libcxx/stdio.h:
 

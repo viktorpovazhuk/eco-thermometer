@@ -71,12 +71,20 @@ void loop()
     Serial.println("In parsePacket");
 
     LoRa.readBytes((uint8_t *)data, 8 * 4);
-    // LoRa.readBytes((uint8_t *)m_dig, 8 * 4);
+    LoRa.readBytes((uint8_t *)m_dig, 8 * 4);
 
     Serial.print("Raw data: ");
     for (int i = 0; i < 8; i++)
     {
       Serial.print(data[i], HEX);
+      Serial.print(" ");
+    }
+    Serial.println();
+
+    Serial.print("m_dig: ");
+    for (int i = 0; i < 32; i++)
+    {
+      Serial.print(m_dig[i], HEX);
       Serial.print(" ");
     }
     Serial.println();

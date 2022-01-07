@@ -49,7 +49,12 @@ void main(void)
     }
     LoRa.setSyncWord(0xF3);
 
-
+    while (!bme.begin())
+          {
+            sprintf(str, "BME failed!\r\n");
+            sendUartMsg(str);
+            __delay_cycles(100000);
+          }
 
     while (1) {
 

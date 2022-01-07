@@ -60,6 +60,7 @@
 #include "driverlib.h"
 #include "Board.h"
 #include "uartlib.h"
+#include <stdio.h>
 
 
 /* Local Function Prototypes */
@@ -101,6 +102,8 @@ int main(void)
       }
 
     printBME280Data();
+
+//    printf("123");
 
     sprintf(str, "Success!\r\n");
                     sendUartMsg(str);

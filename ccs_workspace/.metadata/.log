@@ -8503,3 +8503,46 @@ com.ti.debug.engine.IBreakpointManager$BreakpointException: Target is currently 
 A firmware update is required for the MSP430 Debug Interface (MSP-FET430UIF / MSP-FET / eZ-FET). Click the "Update" button to update the firmware and launch your debug session (this may require several update steps).
 
 DO NOT UNPLUG THE INTERFACE DURING THE UPDATE.
+!SESSION 2022-01-07 16:50:04.982 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-01-07 16:50:06.557
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-01-07 16:50:06.559
+!MESSAGE debugServerDir=/home/vityha/ti/ccs1100/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-01-07 16:50:14.334
+!MESSAGE CCS IDE session started!
+	CCS build: 11.0.0.00012
+	CCS location: /home/vityha/ti/ccs1100/ccs
+	Workspace location: /home/vityha/Documents/УКУ/POC/nonvolatile_thermometer/ccs_workspace
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-01-07 16:50:14.913
+!MESSAGE CCS HTTP adapter started! [ccs.port:44393] - Open 'http://localhost:44393/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.jface 2 0 2022-01-07 17:23:42.077
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-01-07 17:23:42.077
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3114a0d9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4864b467,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
