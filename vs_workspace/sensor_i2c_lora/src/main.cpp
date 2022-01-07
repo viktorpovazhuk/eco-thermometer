@@ -50,23 +50,23 @@ void setup()
 
   Wire.begin();
 
-  // while (!bme.begin())
-  // {
-  //   Serial.println("Could not find BME280 sensor!");
-  //   delay(1000);
-  // }
+  while (!bme.begin())
+  {
+    Serial.println("Could not find BME280 sensor!");
+    delay(1000);
+  }
 
-  // switch (bme.chipModel())
-  // {
-  // case BME280::ChipModel_BME280:
-  //   Serial.println("Found BME280 sensor! Success.");
-  //   break;
-  // case BME280::ChipModel_BMP280:
-  //   Serial.println("Found BMP280 sensor! No Humidity available.");
-  //   break;
-  // default:
-  //   Serial.println("Found UNKNOWN sensor! Error!");
-  // }
+  switch (bme.chipModel())
+  {
+  case BME280::ChipModel_BME280:
+    Serial.println("Found BME280 sensor! Success.");
+    break;
+  case BME280::ChipModel_BMP280:
+    Serial.println("Found BMP280 sensor! No Humidity available.");
+    break;
+  default:
+    Serial.println("Found UNKNOWN sensor! Error!");
+  }
 
   Serial.println("LoRa Sender");
 
@@ -95,36 +95,30 @@ void printBME280Data(
 {
   float temp(NAN), hum(NAN), pres(NAN);
 
-  // BME280::TempUnit tempUnit(BME280::TempUnit_Celsius);
-  // BME280::PresUnit presUnit(BME280::PresUnit_Pa);
+  BME280::TempUnit tempUnit(BME280::TempUnit_Celsius);
+  BME280::PresUnit presUnit(BME280::PresUnit_Pa);
 
   int32_t data[8];
+  uint8_t out_dig[32];
 
+  bme.read(pres, temp, hum, tempUnit, presUnit, data);
+  bme.readDig(out_dig);
+
+  Serial.print("Raw data: ");
   for (int i = 0; i < 8; i++)
   {
-    data[i] = 1;
+    Serial.print(data[i], HEX);
+    Serial.print(" ");
   }
+  Serial.println();
 
-  // uint8_t out_dig[32];
-
-  // bme.read(pres, temp, hum, tempUnit, presUnit, data);
-  // bme.readDig(out_dig);
-
-  // Serial.print("Raw data: ");
-  // for (int i = 0; i < 8; i++)
-  // {
-  //   Serial.print(data[i], HEX);
-  //   Serial.print(" ");
-  // }
-  // Serial.println();
-
-  // Serial.print("Dig: ");
-  // for (int i = 0; i < 32; i++)
-  // {
-  //   Serial.print(out_dig[i], HEX);
-  //   Serial.print(" ");
-  // }
-  // Serial.println();
+  Serial.print("Dig: ");
+  for (int i = 0; i < 32; i++)
+  {
+    Serial.print(out_dig[i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
 
   Serial.println("Sending packet ");
 

@@ -64,7 +64,7 @@ void loop()
   uint32_t data[8];
   uint8_t m_dig[32];
 
-  Serial.println("In loop");
+  // Serial.println("In loop");
 
   if (LoRa.parsePacket())
   {

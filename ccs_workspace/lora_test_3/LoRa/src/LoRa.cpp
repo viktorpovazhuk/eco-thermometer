@@ -85,12 +85,16 @@ int LoRaClass::begin(long frequency)
 
   // setup pins
   GPIO_setAsOutputPin( _port, _ss);
+  GPIO_setAsOutputPin( _port, _reset);
+  GPIO_setAsOutputPin( _port, _dio0);
+
   // set SS high
   GPIO_setOutputHighOnPin( _port, _ss );
 
   if (_reset != -1)
   {
-      GPIO_setOutputHighOnPin( _port, _reset );
+    GPIO_setOutputHighOnPin(_port, _reset);
+    __delay_cycles(100);
 
     // perform reset
     GPIO_setOutputLowOnPin(_port, _reset);

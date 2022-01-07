@@ -68,11 +68,9 @@ void initGPIO();
 void initI2C();
 void Software_Trim();                       // Software Trim to get the best DCOFTRIM value
 
+void printBME280Data();
+
 #define MCLK_FREQ_MHZ 1                     // MCLK = 1MHz
-/* global parameters */
-uint16_t Opt3001Result;
-int8_t Tmp117Result;
-uint8_t Hdc2080Result;
 
 BME280I2C bme;
 
@@ -92,20 +90,6 @@ int main(void)
 
     __bis_SR_register(GIE);  // Enable global interrupts
 
-    //Tmp117 default mode is continues mode
-    //Opt3001 and Hdc2080 default mode is shut down mode.
-//    opt3001Init();
-//
-//    while(1)
-//    {
-//        Opt3001Result =  getOpt3001LuxData();       //OPT3001 is in continues mode
-//        Tmp117Result =  getTmp117TemperatureData(); //Tmp117 is in continues mode
-//        Hdc2080Result = getHdc2080HumidityData(); //Hdc2080 is in trigger mode
-//        __no_operation(); // Add this and set a breakpoint here.
-//        _delay_cycles(100000); //delay 100ms
-//
-//    }
-
     //for clocks to stable
     _delay_cycles(10000);
 
@@ -113,8 +97,10 @@ int main(void)
       {
         sprintf(str, "BME failed!\r\n");
         sendUartMsg(str);
-        __delay_cycles(1000000);
+        __delay_cycles(100000);
       }
+
+    printBME280Data();
 
     sprintf(str, "Success!\r\n");
                     sendUartMsg(str);
@@ -126,6 +112,58 @@ int main(void)
     }
 
     return 0;
+}
+
+void printBME280Data()
+{
+  float temp(0), hum(0), pres(0);
+
+  BME280::TempUnit tempUnit(BME280::TempUnit_Celsius);
+  BME280::PresUnit presUnit(BME280::PresUnit_Pa);
+
+  int32_t data[8];
+  uint8_t out_dig[32];
+
+  bme.read(pres, temp, hum, tempUnit, presUnit, data);
+  bme.readDig(out_dig);
+
+  sprintf(str, "Raw data: ");
+    sendUartMsg(str);
+    for (int i = 0; i < 8; ++i)
+    {
+        sprintf(str, "%d ", ((uint32_t*)data)[i]);
+        sendUartMsg(str);
+        __delay_cycles(1000);
+    }
+    sprintf(str, "\r\n");
+      sendUartMsg(str);
+
+      sprintf(str, "Dig: ");
+          sendUartMsg(str);
+          for (int i = 0; i < 32; ++i)
+          {
+              sprintf(str, "%d ", out_dig[i]);
+              sendUartMsg(str);
+              __delay_cycles(1000);
+          }
+          sprintf(str, "\r\n");
+            sendUartMsg(str);
+
+//  Serial.print("Raw data: ");
+//  for (int i = 0; i < 8; i++)
+//  {
+//    Serial.print(data[i], HEX);
+//    Serial.print(" ");
+//  }
+//  Serial.println();
+//
+//  Serial.print("Dig: ");
+//  for (int i = 0; i < 32; i++)
+//  {
+//    Serial.print(out_dig[i], HEX);
+//    Serial.print(" ");
+//  }
+//  Serial.println();
 }
 
 void initClockTo1MHz()

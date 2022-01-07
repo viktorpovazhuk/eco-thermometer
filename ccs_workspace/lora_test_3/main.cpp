@@ -42,6 +42,9 @@ void main(void)
     }
     LoRa.setSyncWord(0xF3);
 
+    sprintf(str, "Start LoRa!\r\n");
+    sendUartMsg(str);
+
     int32_t data[8];
 
     for (int i = 0; i < 8; i++) {
