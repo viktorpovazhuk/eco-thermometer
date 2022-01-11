@@ -28,8 +28,8 @@ of www.endmemo.com, altitude equation courtesy of NOAA, and dew point equation
 courtesy of Brian McNoldy at http://andrew.rsmas.miami.edu.
  */
 
-#include <bme280/BME280I2C.h>
-#include <bme280/i2c_driver.h>
+#include "BME280I2C.h"
+#include "i2c_driver.h"
 #include "uartlib.h"
 
 #define STR_LEN 100

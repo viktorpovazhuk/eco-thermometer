@@ -103,8 +103,9 @@ int LoRaClass::begin(long frequency)
     __delay_cycles(100);
   }
 
+  // now start SPI from main.cpp
   // start SPI
-  _spi->begin();
+  // _spi->begin();
 
   // check version
   uint8_t version = readRegister(REG_VERSION);
@@ -733,17 +734,17 @@ void LoRaClass::setGain(uint8_t gain)
 //  _reset = reset;
 //  _dio0 = dio0;
 //}
-//
-//void LoRaClass::setSPI(SPIClass &spi)
-//{
-//  _spi = &spi;
-//}
-//
+
+void LoRaClass::setSPI(SPIClass &spi)
+{
+  _spi = &spi;
+}
+
 //void LoRaClass::setSPIFrequency(uint32_t frequency)
 //{
 //  _spiSettings = SPISettings(frequency, MSBFIRST, SPI_MODE0);
 //}
-
+//
 //void LoRaClass::dumpRegisters(Stream &out)
 //{
 //  for (int i = 0; i < 128; i++)

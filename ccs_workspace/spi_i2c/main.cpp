@@ -4,6 +4,8 @@
 #include "uartlib.h"
 #include "stdio.h"
 #include "BME280I2C.h"
+#include "i2c.h"
+#include "SPI.h"
 
 #define MCLK_FREQ_MHZ 1
 
@@ -12,9 +14,8 @@
 char str[STR_LEN];
 
 void initClocks(void);
-void initGpio(void);
 void Software_Trim();
-void initI2C();
+void initGpio(void);
 void sendBME280Data();
 
 BME280I2C bme;
@@ -32,13 +33,15 @@ void main(void)
     // appropriately
     initUart();
     initI2C();
+    SPI.begin();
 
     PMM_unlockLPM5();
 
     // Enable global interrupts
     __enable_interrupt();
 
-    while (!LoRa.begin(433000000)) //
+    LoRa.setSPI(SPI);
+    while (!LoRa.begin(433000000))
     {
         sendUartMsg("Starting LoRa failed!\r\n");
         __delay_cycles(100000);
@@ -84,11 +87,9 @@ void sendBME280Data()
         sendUartMsg(str);
         __delay_cycles(1000);
     }
-    sprintf(str, "\r\n");
-    sendUartMsg(str);
+    sendUartMsg("\r\n");
 
-    sprintf(str, "Send packet\r\n");
-    sendUartMsg(str);
+    sendUartMsg("Send packet\r\n");
 
     // send packet
     LoRa.beginPacket();
@@ -134,16 +135,6 @@ void initGpio(void) {
         // I2C pins
             P1SEL0 |= BIT2 | BIT3;
             P1SEL1 &= ~(BIT2 | BIT3);
-}
-
-void initI2C()
-{
-    UCB0CTLW0 = UCSWRST;                      // Enable SW reset
-    UCB0CTLW0 |= UCMODE_3 | UCMST | UCSSEL__SMCLK | UCSYNC; // I2C master mode, SMCLK
-    UCB0BRW = 10;                            // fSCL = SMCLK/10 = ~100kHz
-//    UCB0I2CSA = SLAVE_ADDR;                   // Slave Address
-    UCB0CTLW0 &= ~UCSWRST;                    // Clear SW reset, resume operation
-    UCB0IE |= UCNACKIE;
 }
 
 void Software_Trim()

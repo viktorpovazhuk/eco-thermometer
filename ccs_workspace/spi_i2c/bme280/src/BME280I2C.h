@@ -30,7 +30,7 @@ Based on the data sheet provided by Bosch for the Bme280 environmental sensor.
 #ifndef TG_BME_280_I2C_H
 #define TG_BME_280_I2C_H
 
-#include <bme280/BME280.h>
+#include "BME280.h"
 
 //////////////////////////////////////////////////////////////////
 /// BME280I2C - I2C Implementation of BME280.
