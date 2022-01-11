@@ -36,47 +36,36 @@ void SPIClass::begin() {
     return;
 }
 
-// stubb
+// dummy
 void SPIClass::beginTransaction() {
     return;
 }
 
-// reset usci
+// dummy
 void SPIClass::endTransaction() {
     return;
 }
 
-uint8_t SPIClass::transfer(uint8_t data) {
+uint8_t SPIClass::transfer(uint8_t data)
+{
     /* Wait for previous tx to complete. */
     while (!EUSCI_A_SPI_getInterruptStatus(EUSCI_A1_BASE,
-                          EUSCI_A_SPI_TRANSMIT_INTERRUPT)) ;
+    EUSCI_A_SPI_TRANSMIT_INTERRUPT))
+        ;
 
     //Clear receive interrupt flag
-        EUSCI_A_SPI_clearInterrupt(EUSCI_A1_BASE,
-              EUSCI_A_SPI_RECEIVE_INTERRUPT
-              );
+    EUSCI_A_SPI_clearInterrupt(EUSCI_A1_BASE,
+    EUSCI_A_SPI_RECEIVE_INTERRUPT);
 
-        __delay_cycles(1000);
+    __delay_cycles(1000);
 
     //Transmit Data to slave
     EUSCI_A_SPI_transmitData(EUSCI_A1_BASE, data);
 
-
-
-    /* Wait for a rx character? */
-//    while (!EUSCI_A_SPI_getInterruptStatus(EUSCI_A1_BASE,
-//                                           EUSCI_A_SPI_RECEIVE_INTERRUPT));
-//
-//    uint8_t RXData = EUSCI_A_SPI_receiveData(EUSCI_A1_BASE);
-//
-//    //Clear receive interrupt flag
-//        EUSCI_A_SPI_clearInterrupt(EUSCI_A1_BASE,
-//              EUSCI_A_SPI_RECEIVE_INTERRUPT
-//              );
-
     wait = 1;
 
-    while (wait);
+    while (wait)
+        ;
 
     uint8_t RXData = EUSCI_A_SPI_receiveData(EUSCI_A1_BASE);
 
@@ -93,16 +82,8 @@ void USCI_A1_ISR(void)
 {
     switch(__even_in_range(UCA1IV, USCI_SPI_UCTXIFG))
     {
-        case USCI_SPI_UCRXIFG:      // UCRXIFG
-            //USCI_A0 TX buffer ready?
-//            while (!EUSCI_A_SPI_getInterruptStatus(EUSCI_A1_BASE,
-//                        EUSCI_A_SPI_TRANSMIT_INTERRUPT));
-//
-//            uint8_t RXData = EUSCI_A_SPI_receiveData(EUSCI_A1_BASE);
-
+        case USCI_SPI_UCRXIFG:
             wait = 0;
-
-            //Delay between transmissions for slave to process information
             __delay_cycles(40);
             break;
         default:

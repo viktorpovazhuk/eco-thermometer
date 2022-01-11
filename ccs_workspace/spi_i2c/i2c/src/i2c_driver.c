@@ -1,4 +1,4 @@
-#include <bme280/i2c_driver.h>
+#include "i2c_driver.h"
 
 /* Used to track the state of the software state machine*/
 I2C_Mode MasterMode = IDLE_MODE;
