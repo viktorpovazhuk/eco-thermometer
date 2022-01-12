@@ -64,6 +64,8 @@
 #include "driverlib.h"
 #include "Board.h"
 
+int16_t THRESHOLD_HIGH = 682;
+int16_t THRESHOLD_LOW = 613;
 int16_t adcResult;
 
 void main (void)
@@ -106,6 +108,10 @@ void main (void)
         ADC_CLOCKSOURCE_ADCOSC,
         ADC_CLOCKDIVIDER_1);
 
+    ADC_setWindowComp(ADC_BASE,
+                      THRESHOLD_HIGH,
+                      THRESHOLD_LOW);
+
     ADC_enable(ADC_BASE);
 
     /*
@@ -115,7 +121,7 @@ void main (void)
      */
     ADC_setupSamplingTimer(ADC_BASE,
             ADC_CYCLEHOLD_16_CYCLES,
-            ADC_MULTIPLESAMPLESDISABLE);
+            ADC_MULTIPLESAMPLESENABLE);
 
     //Configure Memory Buffer
     /*
@@ -129,12 +135,22 @@ void main (void)
             ADC_VREFPOS_INT,
             ADC_VREFNEG_AVSS);
 
-    ADC_clearInterrupt(ADC_BASE,
-            ADC_COMPLETED_INTERRUPT);
+//    ADC_clearInterrupt(ADC_BASE,
+//            ADC_COMPLETED_INTERRUPT);
+//
+//    //Enable Memory Buffer interrupt
+//    ADC_enableInterrupt(ADC_BASE,
+//            ADC_COMPLETED_INTERRUPT);
 
-    //Enable Memory Buffer interrupt
+    ADC_clearInterrupt(ADC_BASE,
+                       ADC_ABOVETHRESHOLD_INTERRUPT | ADC_BELOWTHRESHOLD_INTERRUPT | ADC_INSIDEWINDOW_INTERRUPT);
     ADC_enableInterrupt(ADC_BASE,
-            ADC_COMPLETED_INTERRUPT);
+                        ADC_ABOVETHRESHOLD_INTERRUPT | ADC_BELOWTHRESHOLD_INTERRUPT | ADC_INSIDEWINDOW_INTERRUPT);
+
+//    ADC_clearInterrupt(ADC_BASE,
+//                       ADC_ABOVETHRESHOLD_INTERRUPT);
+//    ADC_enableInterrupt(ADC_BASE,
+//                       ADC_ABOVETHRESHOLD_INTERRUPT);
 
     //Internal Reference ON
     PMM_enableInternalReference();
@@ -143,6 +159,11 @@ void main (void)
     //If ref voltage no ready, WAIT
     while (PMM_REFGEN_NOTREADY == PMM_getVariableReferenceVoltageStatus());
 
+    __bis_SR_register(GIE);
+
+    ADC_startConversion(ADC_BASE,
+                        ADC_REPEATED_SINGLECHANNEL);
+
     for (;;)
     {
         //Delay between conversions
@@ -150,11 +171,10 @@ void main (void)
 
         //Enable and Start the conversion
         //in Single-Channel, Single Conversion Mode
-        ADC_startConversion(ADC_BASE,
-                ADC_SINGLECHANNEL);
+
 
         //LPM0, ADC10_ISR will force exit
-        __bis_SR_register(CPUOFF + GIE);
+//        __bis_SR_register(CPUOFF + GIE);
         //For debug only
         __no_operation();
 
@@ -175,7 +195,10 @@ void ADC_ISR (void)
         case  0: break; //No interrupt
         case  2: break; //conversion result overflow
         case  4: break; //conversion time overflow
-        case  6: break; //ADC10HI
+        case  6:
+            //For debug only
+            __no_operation();
+            break; //ADC10HI
         case  8: break; //ADC10LO
         case 10: break; //ADC10IN
         case 12:        //ADC10IFG0
