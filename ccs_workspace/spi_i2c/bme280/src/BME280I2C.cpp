@@ -80,7 +80,7 @@ bool BME280I2C::ReadRegister(
 {
   uint8_t ord(0);
 
-  I2C_Master_ReadReg(m_settings.bme280Addr, addr, length);//read to result register
+  I2C_Master_ReadReg(m_settings.bme280Addr, addr, length); //read to result register
   CopyArray(ReceiveBuffer, data, length);
 
   // ord isn't incremented!!

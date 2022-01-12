@@ -63,11 +63,12 @@ int main(void)
 
     /* Now blink the LED in an endless loop. */
     while (1) {
-        if (sleep) {
-            P1OUT |= BIT0;
-            ctpl_enterLpm45(CTPL_DISABLE_RESTORE_ON_RESET);
-            P1OUT &= ~BIT0;
-        }
+//        if (sleep) {
+//            P1OUT |= BIT0;
+//            ctpl_enterLpm45(CTPL_DISABLE_RESTORE_ON_RESET);
+//            P1OUT &= ~BIT0;
+//        }
+        sleep = 0;
         P1OUT ^= BIT1;
         __delay_cycles(100000);
     }
@@ -118,9 +119,11 @@ void PORT2_ISR(void)
     {
         case P2IV_P2IFG3:
             sleep = 0;
+
             break;
         case P2IV_P2IFG7:
-            sleep = 1;
+//            sleep = 1;
+            ctpl_enterLpm45(CTPL_DISABLE_RESTORE_ON_RESET);
             break;
         default:
             break;

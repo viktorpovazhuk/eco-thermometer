@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="write"/>
+		<item key="selection" value="ReadRegister"/>
 		<list key="findhistory">
+			<item value="ReadRegister"/>
+			<item value="setSPI"/>
 			<item value="write"/>
 			<item value="EUSCI_A0_BASE"/>
 			<item value="va_list"/>
@@ -21,8 +23,6 @@
 			<item value="USCI_A0"/>
 			<item value="  // example -&gt; read each func"/>
 			<item value=".TI.persistent"/>
-			<item value="persistent"/>
-			<item value="PERSISTENT"/>
 		</list>
 		<list key="replacehistory">
 			<item value="EUSCI_A1_BASE"/>
@@ -35,8 +35,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="2666"/>
-		<item key="DIALOG_Y_ORIGIN" value="625"/>
+		<item key="DIALOG_X_ORIGIN" value="1500"/>
+		<item key="DIALOG_Y_ORIGIN" value="608"/>
 		<item key="DIALOG_WIDTH" value="348"/>
 		<item key="DIALOG_HEIGHT" value="437"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
