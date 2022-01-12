@@ -10,7 +10,8 @@
 <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/uart_spi_fix" type="4"/>
 <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/uart_test" type="4"/>
 <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/voltage_monitor_gui_msp430fr2433" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/lpm_adc" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/lpm_adc" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/joined_proj" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1636739679008_0" label="Window Working Set" name="Aggregate for window 1636739679008"/>
 <mruList name="actual"/>

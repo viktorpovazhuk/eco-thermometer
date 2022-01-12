@@ -56,6 +56,8 @@ void main(void)
 
     while (1)
     {
+        GPIO_toggleOutputOnPin(GPIO_PORT_P1,
+                               GPIO_PIN1);
         sendBME280Data();
         __delay_cycles(200000);
     }
@@ -133,8 +135,13 @@ void initGpio(void) {
             );
 
         // I2C pins
-            P1SEL0 |= BIT2 | BIT3;
-            P1SEL1 &= ~(BIT2 | BIT3);
+        P1SEL0 |= BIT2 | BIT3;
+        P1SEL1 &= ~(BIT2 | BIT3);
+
+        GPIO_setAsOutputPin(
+                GPIO_PORT_P1,
+                GPIO_PIN1
+            );
 }
 
 void Software_Trim()
