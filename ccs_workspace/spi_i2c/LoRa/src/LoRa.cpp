@@ -69,7 +69,7 @@
 #endif
 
 LoRaClass::LoRaClass() : _spi(&LORA_DEFAULT_SPI),
-                         _ss(LORA_DEFAULT_SS_PIN), _reset(LORA_DEFAULT_RESET_PIN), _dio0(LORA_DEFAULT_DIO0_PIN), _port(LORA_DEFAULT_PORT),
+                         _ss(LORA_DEFAULT_SS_PIN), _reset(LORA_DEFAULT_RESET_PIN), _dio0(LORA_DEFAULT_DIO0_PIN), _port(LORA_DEFAULT_PORT), _port_ss(LORA_DEFAULT_PORT_SS),
                          _frequency(0),
                          _packetIndex(0),
                          _implicitHeaderMode(0),
@@ -84,23 +84,23 @@ int LoRaClass::begin(long frequency)
 {
 
   // setup pins
-  GPIO_setAsOutputPin( _port, _ss);
+  GPIO_setAsOutputPin( _port_ss, _ss);
   GPIO_setAsOutputPin( _port, _reset);
   GPIO_setAsOutputPin( _port, _dio0);
 
   // set SS high
-  GPIO_setOutputHighOnPin( _port, _ss );
+  GPIO_setOutputHighOnPin( _port_ss, _ss );
 
   if (_reset != -1)
   {
-    GPIO_setOutputHighOnPin(_port, _reset);
-    __delay_cycles(100);
+//    GPIO_setOutputHighOnPin(_port, _reset);
+//    __delay_cycles(100);
 
     // perform reset
     GPIO_setOutputLowOnPin(_port, _reset);
-    __delay_cycles(100);
+    __delay_cycles(10000);
     GPIO_setOutputHighOnPin(_port, _reset);
-    __delay_cycles(100);
+    __delay_cycles(10000);
   }
 
   // now start SPI from main.cpp
@@ -822,13 +822,13 @@ uint8_t LoRaClass::singleTransfer(uint8_t address, uint8_t value)
 
   _spi->beginTransaction();
 
-  GPIO_setOutputLowOnPin(_port, _ss);
+  GPIO_setOutputLowOnPin(_port_ss, _ss);
 
   response = _spi->transfer(address);
   response = _spi->transfer(value);
   _spi->endTransaction();
 
-  GPIO_setOutputHighOnPin(_port, _ss);
+  GPIO_setOutputHighOnPin(_port_ss, _ss);
 
   return response;
 }

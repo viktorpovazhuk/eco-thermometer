@@ -1,7 +1,7 @@
 #include "LoRa.h"
 #include "driverlib.h"
 #include "Board.h"
-#include "uartlib.h"
+//#include "uartlib.h"
 #include "stdio.h"
 #include "BME280I2C.h"
 #include "i2c.h"
@@ -9,7 +9,7 @@
 
 #define MCLK_FREQ_MHZ 1
 
-#define STR_LEN 100
+#define STR_LEN 300
 
 char str[STR_LEN];
 
@@ -24,6 +24,7 @@ void main(void)
 {
     //Stop Watchdog Timer
     WDT_A_hold(WDT_A_BASE);
+    PMM_unlockLPM5();
 
     initClocks();
 
@@ -31,11 +32,11 @@ void main(void)
 
     // clocks should be initialized
     // appropriately
-    initUart();
+//    initUart();
     initI2C();
     SPI.begin();
 
-    PMM_unlockLPM5();
+
 
     // Enable global interrupts
     __enable_interrupt();
@@ -43,15 +44,17 @@ void main(void)
     LoRa.setSPI(SPI);
     while (!LoRa.begin(433000000))
     {
-        sendUartMsg("Starting LoRa failed!\r\n");
+//        sendUartMsg("Starting LoRa failed!\r\n");
         __delay_cycles(100000);
     }
     LoRa.setSyncWord(0xF3);
 
     while (!bme.begin())
     {
-        sendUartMsg("BME failed!\r\n");
-        __delay_cycles(100000);
+//        sendUartMsg("BME failed!\r\n");
+        GPIO_setAsOutputPin(GPIO_PORT_P1, GPIO_PIN1);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P1, GPIO_PIN1);
+        __delay_cycles(20 * 100000);
     }
 
     while (1)
@@ -71,31 +74,33 @@ void sendBME280Data()
     bme.readData(data);
     bme.readDig(out_dig);
 
-    sendUartMsg("Raw data: ");
-    for (int i = 0; i < 8; ++i)
-    {
-        sprintf(str, "%d ", ((uint32_t*) data)[i]);
-        sendUartMsg(str);
-        __delay_cycles(1000);
-    }
-    sendUartMsg("\r\n");
-
-    sendUartMsg("Dig: ");
-    for (int i = 0; i < 32; ++i)
-    {
-        sprintf(str, "%d ", out_dig[i]);
-        sendUartMsg(str);
-        __delay_cycles(1000);
-    }
-    sendUartMsg("\r\n");
-
-    sendUartMsg("Send packet\r\n");
+//    sendUarztMsg("Raw data: ");
+//    for (int i = 0; i < 8; ++i)
+//    {
+//        sprintf(str, "%d ", ((uint32_t*) data)[i]);
+//        sendUartMsg(str);
+//        __delay_cycles(1000);
+//    }
+//    sendUartMsg("\r\n");
+//
+//    sendUartMsg("Dig: ");
+//    for (int i = 0; i < 32; ++i)
+//    {
+//        sprintf(str, "%d ", out_dig[i]);
+//        sendUartMsg(str);
+//        __delay_cycles(1000);
+//    }
+//    sendUartMsg("\r\n");
+//
+//    sendUartMsg("Send packet\r\n");
 
     // send packet
     LoRa.beginPacket();
+    GPIO_setOutputHighOnPin(GPIO_PORT_P1, GPIO_PIN0);
 
     LoRa.write((uint8_t*) data, 8 * 4);
     LoRa.write((uint8_t*) out_dig, 32);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P1, GPIO_PIN0);
 
     LoRa.endPacket();
 
@@ -115,26 +120,36 @@ void initClocks(void) {
 
 void initGpio(void) {
     //Configure UART pins
-        GPIO_setAsPeripheralModuleFunctionInputPin(
-            GPIO_PORT_UCA0TXD,
-            GPIO_PIN_UCA0TXD,
-            GPIO_FUNCTION_UCA0TXD
-        );
-        GPIO_setAsPeripheralModuleFunctionInputPin(
-            GPIO_PORT_UCA0RXD,
-            GPIO_PIN_UCA0RXD,
-            GPIO_FUNCTION_UCA0RXD
-        );
+//        GPIO_setAsPeripheralModuleFunctionInputPin(
+//            GPIO_PORT_UCA0TXD,
+//            GPIO_PIN_UCA0TXD,
+//            GPIO_FUNCTION_UCA0TXD
+//        );
+//        GPIO_setAsPeripheralModuleFunctionInputPin(
+//            GPIO_PORT_UCA0RXD,
+//            GPIO_PIN_UCA0RXD,
+//            GPIO_FUNCTION_UCA0RXD
+//        );
 
         GPIO_setAsPeripheralModuleFunctionInputPin(
                 GPIO_PORT_P2,
                 GPIO_PIN4 + GPIO_PIN5 + GPIO_PIN6,
                 GPIO_PRIMARY_MODULE_FUNCTION
             );
+        GPIO_setAsPeripheralModuleFunctionInputPin(
+                GPIO_PORT_P3,
+                GPIO_PIN1,
+                GPIO_PRIMARY_MODULE_FUNCTION
+            );
 
         // I2C pins
             P1SEL0 |= BIT2 | BIT3;
             P1SEL1 &= ~(BIT2 | BIT3);
+
+        // LED for debugging
+        GPIO_setAsOutputPin(GPIO_PORT_P1, GPIO_PIN0);
+        GPIO_setOutputLowOnPin(GPIO_PORT_P1, GPIO_PIN0);
+
 }
 
 void Software_Trim()

@@ -22,10 +22,11 @@
 #else
 #define LORA_DEFAULT_SPI           SPI
 #define LORA_DEFAULT_SPI_FREQUENCY 8E6 
-#define LORA_DEFAULT_SS_PIN        GPIO_PIN0
+#define LORA_DEFAULT_SS_PIN        GPIO_PIN1
 #define LORA_DEFAULT_RESET_PIN     GPIO_PIN1
 #define LORA_DEFAULT_DIO0_PIN      GPIO_PIN2
 #define LORA_DEFAULT_PORT          GPIO_PORT_P2
+#define LORA_DEFAULT_PORT_SS       GPIO_PORT_P3
 #endif
 
 #define PA_OUTPUT_RFO_PIN          0
@@ -133,6 +134,7 @@ private:
   uint16_t _reset;
   uint16_t _dio0;
   uint8_t _port;
+  uint8_t _port_ss;
   long _frequency;
   int _packetIndex;
   int _implicitHeaderMode;
