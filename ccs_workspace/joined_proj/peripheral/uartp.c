@@ -5,9 +5,9 @@
  *      Author: vityha
  */
 
+#include <uartp.h>
 #include "driverlib.h"
 #include "Board.h"
-#include "uartlib.h"
 
 void initUart(void) {
     //Configure UART

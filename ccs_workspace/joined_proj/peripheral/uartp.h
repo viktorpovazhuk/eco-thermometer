@@ -13,6 +13,7 @@ extern "C" {
 #endif
 
 #include "stdio.h"
+#include "driverlib.h"
 
 void initUart(void);
 void sendUartMsg(const char* str);

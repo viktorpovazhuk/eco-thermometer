@@ -5,7 +5,7 @@
  *      Author: vityha
  */
 
-#include "adclib.h"
+#include <adcp.h>
 
 static const int16_t THRESHOLD_HIGH = 682;
 static const int16_t THRESHOLD_LOW = 613;

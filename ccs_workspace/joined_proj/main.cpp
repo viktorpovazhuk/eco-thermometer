@@ -1,12 +1,12 @@
+#include <adcp.h>
+#include <i2cp.h>
+#include <uartp.h>
 #include "LoRa.h"
 #include "driverlib.h"
 #include "Board.h"
-#include "uartlib.h"
 #include "stdio.h"
 #include "BME280I2C.h"
-#include "i2c.h"
 #include "SPI.h"
-#include "adclib.h"
 
 #define MCLK_FREQ_MHZ 1
 

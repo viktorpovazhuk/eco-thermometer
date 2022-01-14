@@ -6,7 +6,7 @@
  */
 
 
-#include "i2c.h"
+#include <i2cp.h>
 
 void initI2C()
 {

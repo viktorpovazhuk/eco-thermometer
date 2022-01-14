@@ -5,8 +5,8 @@
  *      Author: vityha
  */
 
-#ifndef I2C_SRC_I2C_H_
-#define I2C_SRC_I2C_H_
+#ifndef I2C_SRC_I2CP_H_
+#define I2C_SRC_I2CP_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -20,4 +20,4 @@ void initI2C();
 }
 #endif
 
-#endif /* I2C_SRC_I2C_H_ */
+#endif /* I2C_SRC_I2CP_H_ */
