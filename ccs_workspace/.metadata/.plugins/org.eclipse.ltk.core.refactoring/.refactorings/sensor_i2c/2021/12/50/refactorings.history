@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;sensor_i2c/MSP430FR2xx_4xx&apos; to &apos;driverlib&apos;" description="Rename resource &apos;MSP430FR2xx_4xx&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MSP430FR2xx_4xx" name="driverlib" stamp="1638970633603" updateReferences="true"/>
-</session>
