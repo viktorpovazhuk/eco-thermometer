@@ -3,6 +3,7 @@
 /.tempFiles/
 /ctpl_ex2_rtc_lpm35_msp-exp430fr2433/
 /calendar_tamper_detect_gui_ccs/
+/ctpl_test/
 /ctpl_test_1/
 /esp_lora_test/
 /eusci_b_i2c_ex1_masterRxMultiple/
@@ -14,3 +15,8 @@
 /lora_test_2/
 /msp430fr2433_gc_simple_json/
 /sensor/
+.metadata/
+.jxbrowser.userdata/
+RemoteSystemsTempFiles/
+
+git rm -r --cached
