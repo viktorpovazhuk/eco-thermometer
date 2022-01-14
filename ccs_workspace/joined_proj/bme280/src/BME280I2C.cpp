@@ -30,7 +30,7 @@ courtesy of Brian McNoldy at http://andrew.rsmas.miami.edu.
 
 #include "BME280I2C.h"
 #include "i2c_driver.h"
-#include "uartlib.h"
+#include "uartp.h"
 
 #define STR_LEN 100
 

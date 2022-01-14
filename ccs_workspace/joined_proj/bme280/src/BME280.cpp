@@ -29,7 +29,7 @@ courtesy of Brian McNoldy at http://andrew.rsmas.miami.edu.
  */
 
 #include "BME280.h"
-#include "uartlib.h"
+#include "uartp.h"
 
 #define STR_LEN 100
 
