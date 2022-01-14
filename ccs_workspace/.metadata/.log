@@ -12545,3 +12545,27 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2022-01-12 18:25:18.901
 !MESSAGE No repository found at http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/CCSv5/Updates/.
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-01-14 19:13:31.098
+!MESSAGE Indexed 'shutdown_adc' (63 sources, 111 headers) in 1.22 sec: 3,894 declarations; 13,172 references; 0 unresolved inclusions; 4 syntax errors; 9 unresolved names (0.053%)
+
+!ENTRY org.eclipse.jface 2 0 2022-01-14 20:20:56.639
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-01-14 20:20:56.639
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61c1ee0d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6fbab97,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)

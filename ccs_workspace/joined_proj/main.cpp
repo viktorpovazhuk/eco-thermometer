@@ -15,8 +15,10 @@
 char str[STR_LEN];
 
 void initClocks(void);
-void Software_Trim();
 void initGpio(void);
+void initTimer(void);
+void Software_Trim();
+
 void sendBME280Data();
 
 BME280I2C bme;
@@ -36,6 +38,8 @@ void main(void)
     initI2C();
     SPI.begin();
 
+    initTimer();
+
     PMM_unlockLPM5();
 
     // Enable global interrupts
@@ -44,14 +48,18 @@ void main(void)
     LoRa.setSPI(SPI);
     while (!LoRa.begin(433000000))
     {
-        sendUartMsg("Starting LoRa failed!\r\n");
+        GPIO_setOutputHighOnPin(GPIO_PORT_P1,
+                                       GPIO_PIN0);
+
         __delay_cycles(100000);
     }
     LoRa.setSyncWord(0xF3);
 
     while (!bme.begin())
     {
-        sendUartMsg("BME failed!\r\n");
+        GPIO_setOutputHighOnPin(GPIO_PORT_P1,
+                                               GPIO_PIN0);
+
         __delay_cycles(100000);
     }
 
@@ -65,7 +73,8 @@ void main(void)
         GPIO_toggleOutputOnPin(GPIO_PORT_P1,
                                GPIO_PIN1);
         sendBME280Data();
-        __delay_cycles(200000);
+
+        _low_power_mode_3();
     }
 
     return;
@@ -79,26 +88,6 @@ void sendBME280Data()
     bme.readData(data);
     bme.readDig(out_dig);
 
-    sendUartMsg("Raw data: ");
-    for (int i = 0; i < 8; ++i)
-    {
-        sprintf(str, "%d ", ((uint32_t*) data)[i]);
-        sendUartMsg(str);
-        __delay_cycles(1000);
-    }
-    sendUartMsg("\r\n");
-
-    sendUartMsg("Dig: ");
-    for (int i = 0; i < 32; ++i)
-    {
-        sprintf(str, "%d ", out_dig[i]);
-        sendUartMsg(str);
-        __delay_cycles(1000);
-    }
-    sendUartMsg("\r\n");
-
-    sendUartMsg("Send packet\r\n");
-
     // send packet
     LoRa.beginPacket();
 
@@ -108,6 +97,18 @@ void sendBME280Data()
     LoRa.endPacket();
 
     return;
+}
+
+void initTimer(void) {
+    Timer_A_initUpModeParam initUpModeParam = {0};
+    initUpModeParam.clockSource = TIMER_A_CLOCKSOURCE_ACLK;
+    initUpModeParam.clockSourceDivider = TIMER_A_CLOCKSOURCE_DIVIDER_64;
+    initUpModeParam.timerPeriod = 2500;
+    initUpModeParam.timerInterruptEnable_TAIE = TIMER_A_TAIE_INTERRUPT_DISABLE;
+    initUpModeParam.captureCompareInterruptEnable_CCR0_CCIE = TIMER_A_CCIE_CCR0_INTERRUPT_ENABLE;
+    initUpModeParam.timerClear = TIMER_A_DO_CLEAR;
+    initUpModeParam.startTimer = true;
+    Timer_A_initUpMode(TIMER_A0_BASE, &initUpModeParam);
 }
 
 void initClocks(void) {
@@ -149,6 +150,10 @@ void initGpio(void) {
                 GPIO_PORT_P1,
                 GPIO_PIN1
             );
+        GPIO_setAsOutputPin(
+                        GPIO_PORT_P1,
+                        GPIO_PIN0
+                    );
 }
 
 void Software_Trim()
@@ -218,4 +223,15 @@ void Software_Trim()
     CSCTL0 = csCtl0Copy;                       // Reload locked DCOTAP
     CSCTL1 = csCtl1Copy;                       // Reload locked DCOFTRIM
     while(CSCTL7 & (FLLUNLOCK0 | FLLUNLOCK1)); // Poll until FLL is locked
+}
+
+#if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
+#pragma vector=TIMER0_A0_VECTOR
+__interrupt
+#elif defined(__GNUC__)
+__attribute__((interrupt(TIMER0_A0_VECTOR)))
+#endif
+void TIMER0_A0_ISR (void)
+{
+    _low_power_mode_off_on_exit();
 }

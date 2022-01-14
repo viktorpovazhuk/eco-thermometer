@@ -73,7 +73,7 @@ __interrupt
 __attribute__((interrupt(ADC_VECTOR)))
 #endif
 void ADC_ISR (void)
-l{
+{
     switch (__even_in_range(ADCIV,12)){
         case  0: break; //No interrupt
         case  2: break; //conversion result overflow
@@ -87,7 +87,6 @@ l{
                                 ADC_BELOWTHRESHOLD_INTERRUPT);
             ADC_disableInterrupt(ADC_BASE,
                                  ADC_ABOVETHRESHOLD_INTERRUPT);
-            _low_power_mode_off_on_exit();
             break; //ADC10HI
         case  8:
             // for debug
@@ -98,16 +97,7 @@ l{
                                 ADC_ABOVETHRESHOLD_INTERRUPT);
             ADC_disableInterrupt(ADC_BASE,
                                  ADC_BELOWTHRESHOLD_INTERRUPT);
-            // for debug
-            GPIO_setOutputHighOnPin(
-                                GPIO_PORT_LED1,
-                                GPIO_PIN_LED1
-                            );
-            _low_power_mode_3();
-            GPIO_setOutputLowOnPin(
-                                GPIO_PORT_LED1,
-                                GPIO_PIN_LED1
-                            );
+//            ctpl_enterShutdown(CTPL_SHUTDOWN_TIMEOUT_32_MS);
             break; //ADC10LO
         case 10: break; //ADC10IN
         case 12:        //ADC10IFG0
