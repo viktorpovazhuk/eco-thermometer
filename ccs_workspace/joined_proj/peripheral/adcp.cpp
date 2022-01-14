@@ -7,8 +7,8 @@
 
 #include <adcp.h>
 
-static const int16_t THRESHOLD_HIGH = 682;
-static const int16_t THRESHOLD_LOW = 613;
+#define THRESHOLD_HIGH 682
+#define THRESHOLD_LOW 613
 int16_t adcResult;
 
 void initAdc(void)

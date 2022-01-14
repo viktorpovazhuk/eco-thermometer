@@ -2,3 +2,15 @@
 /.jxbrowser.userdata/
 /.tempFiles/
 /ctpl_ex2_rtc_lpm35_msp-exp430fr2433/
+/calendar_tamper_detect_gui_ccs/
+/ctpl_test_1/
+/esp_lora_test/
+/eusci_b_i2c_ex1_masterRxMultiple/
+/i2c_test/
+/lab_02b_blink/
+/lab_03a_gpio/
+/lora_i2c/
+/lora_test/
+/lora_test_2/
+/msp430fr2433_gc_simple_json/
+/sensor/
