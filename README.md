@@ -13,7 +13,7 @@
 
 ## Algorithm of work
 
-![Algorithm](https://drive.google.com/file/d/1IWgaRdB-Hr1IS11BisxK-5cfzm0fUIVL/view?usp=sharing "Algorithm")
+![Algorithm](https://drive.google.com/uc?id=1IWgaRdB-Hr1IS11BisxK-5cfzm0fUIVL "Algorithm")
 
 ## Wiki
 
