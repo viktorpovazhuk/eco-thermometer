@@ -11,7 +11,16 @@
 3. During time intervals between reading raw data, MCU is in low-power mode.
 4. Tranciever Ra-01, temperature sensor BME280 та MCU MSP430FR2433 are power from stable power supply provided by CJMCU-2557, which stores the energy extracted from solar cell in the supercapacitor.
 
+## Project structure
+* MSP_part/ - Code Composer Studio project for MSP430FR2433
+* ESP32_LoRa_Communication/ - Platformio project for receiver TTGO LoRa32 v2.0
+
+## Contributors
+* Victor Povazhuk
+* Bohdan Mahometa
+
+## Acknowledgements
+We want to thank our mentor Andrii Rachek, Senior Hardware Engineer at Renesas, for guiding us along developing the project.
 
 ## Wiki
-
-See <a href="https://github.com/viktorpovazhuk/eco-thermometer/wiki">Github wiki page of the project</a> for more detailed description, specifications and instruction for assembling the project.
+See <a href="https://github.com/viktorpovazhuk/eco-thermometer/wiki">Github wiki page of the project</a> for a more detailed description, specifications and instruction for assembling the project.
