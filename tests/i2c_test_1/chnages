@@ -1,0 +1,2 @@
+1. rewrote read/wr register in bme280i2c
+2. defined null
