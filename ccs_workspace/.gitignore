@@ -18,5 +18,3 @@
 .metadata/
 .jxbrowser.userdata/
 RemoteSystemsTempFiles/
-
-git rm -r --cached

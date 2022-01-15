@@ -10,7 +10,7 @@
 #include "stdio.h"
 #include "BME280I2C.h"
 #include "SPI.h"
-#include "hash_function.h"
+#include <ctpl.h>
 
 void sendBME280Data();
 
@@ -18,6 +18,11 @@ BME280I2C bme;
 
 void main(void)
 {
+    // TODO:
+    // 1. reset peripheral. don't reset -> LED is light when only output
+    // 2. why adc interrupt occurs on lora? -> voltage fault -> oscilograph
+    // 3. create a hash function
+
     //Stop Watchdog Timer
     WDT_A_hold(WDT_A_BASE);
 
@@ -76,19 +81,16 @@ void main(void)
 void sendBME280Data()
 {
     int32_t data[8];
-    uint8_t m_dig[32];
+    uint8_t out_dig[32];
 
     bme.readData(data);
-    bme.readDig(m_dig);
-
-    uint8_t controlValue = calculateControlValue((uint8_t*) data, 32, (uint8_t*) m_dig, 32);
+    bme.readDig(out_dig);
 
     // send packet
     LoRa.beginPacket();
 
     LoRa.write((uint8_t*) data, 8 * 4);
-    LoRa.write((uint8_t*) m_dig, 32);
-    LoRa.write(controlValue);
+    LoRa.write((uint8_t*) out_dig, 32);
 
     LoRa.endPacket();
 
