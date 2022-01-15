@@ -1,8 +1,8 @@
 # Battery-free thermometer
 
-**Battery-free thermometer** - battery-free low power device, that powers from solar energy, stored in the form of electric field of supercapacitor, and transmits sensor data (temperature, relative humidity and pressure) via radioband.
+**Battery-free thermometer** is a battery-free low power device, powered from solar energy, stored in the form of energy of electric field of the supercapacitor, that transmits sensor data (temperature, relative humidity and pressure) via radioband.
 
-![Schematic of the device](https://drive.google.com/uc?id=1ibItwVbWWrtztcvywundsaXlyGfxLJ5s "Diagram of communication between battery-free thermometer and testing receiver")
+![Schematic of the device](https://drive.google.com/uc?id=1ibItwVbWWrtztcvywundsaXlyGfxLJ5s "Diagram of communication between battery-free thermometer and test receiver")
 *Diagram 1.* Communication between battery-free thermometer and testing receiver
 
 ## Operation of battery-free thermometer
