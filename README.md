@@ -10,3 +10,8 @@
 2. MCU MSP430FR2433 transmits read raw data via RF band 433MHz using RF tranceiver Ra-01.
 3. During time intervals between reading raw data, MCU is in low-power mode.
 4. Tranciever Ra-01, temperature sensor BME280 та MCU MSP430FR2433 are power from stable power supply provided by CJMCU-2557, which stores the energy extracted from solar cell in the supercapacitor.
+
+
+## Wiki
+
+See <a href="https://github.com/viktorpovazhuk/eco-thermometer/wiki">Github wiki page of the project</a> for more detailed description, specifications and instruction for assembling the project.
