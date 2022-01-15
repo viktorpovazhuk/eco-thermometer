@@ -18,12 +18,19 @@ void calculateBME280Data(
     float &temp,
     float &hum,
     float &pres);
-void printOnDisplay(String text);
+void printOnDisplay(float temp, float humidity, float pressure);
+
 BME280I2C bme; // Default : forced mode, standby time = 1000 ms
 // Oversampling = pressure ×1, temperature ×1, humidity ×1, filter off,
 
+uint8_t calculateControlValue(uint8_t *data, uint16_t data_length, uint8_t *m_dig, uint16_t m_dig_length);
+
+int counter;
+
 void setup()
 {
+  counter = 0;
+  
   Serial.begin(9600);
   while (!Serial)
     ;
@@ -64,14 +71,15 @@ void loop()
   uint32_t data[8];
   uint8_t m_dig[32];
 
-  // Serial.println("In loop");
-
   if (LoRa.parsePacket())
   {
     Serial.println("In parsePacket");
 
     LoRa.readBytes((uint8_t *)data, 8 * 4);
     LoRa.readBytes((uint8_t *)m_dig, 8 * 4);
+    uint8_t receivedControlValue = LoRa.read();
+
+    uint8_t controlValue = calculateControlValue((uint8_t *)data, 32, m_dig, 32);
 
     Serial.print("Raw data: ");
     for (int i = 0; i < 8; i++)
@@ -89,25 +97,48 @@ void loop()
     }
     Serial.println();
 
+    Serial.print("Received control value: ");
+    Serial.println(receivedControlValue);
+    Serial.print("Calculated control value: ");
+    Serial.println(controlValue);
+
     float temp(NAN), hum(NAN), pres(NAN);
 
-    calculateBME280Data(&Serial, data, m_dig, temp, hum, pres);
+    if (receivedControlValue == controlValue)
+    {
+      calculateBME280Data(&Serial, data, m_dig, temp, hum, pres);
 
-    Serial.print("Temp: ");
-    Serial.print(temp);
-    Serial.print("°C");
-    Serial.print("\t\tHumidity: ");
-    Serial.print(hum);
-    Serial.print("% RH");
-    Serial.print("\t\tPressure: ");
-    Serial.print(pres);
-    Serial.println("Pa");
+      Serial.print("Temp: ");
+      Serial.print(temp);
+      Serial.print("°C");
+      Serial.print("\t\tHumidity: ");
+      Serial.print(hum);
+      Serial.print("% RH");
+      Serial.print("\t\tPressure: ");
+      Serial.print(pres);
+      Serial.println("Pa");
 
-    printOnDisplay("temp = " + String(temp));
-    // printOnDisplay(";)");
+      printOnDisplay(temp, hum, pres);
+      
+      counter++;
+    }
   }
 
   delay(200);
+}
+
+uint8_t calculateControlValue(uint8_t *data, uint16_t data_length, uint8_t *m_dig, uint16_t m_dig_length)
+{
+  uint8_t sum = 0;
+  for (uint16_t i = 0; i < data_length; i++)
+  {
+    sum += data[i] % 10;
+  }
+  for (uint16_t i = 0; i < m_dig_length; i++)
+  {
+    sum += m_dig[i] % 10;
+  }
+  return sum;
 }
 
 //////////////////////////////////////////////////////////////////
@@ -127,10 +158,16 @@ void calculateBME280Data(
   bme.read(data, pres, temp, hum, tempUnit, presUnit);
 }
 
-void printOnDisplay(String text)
+void printOnDisplay(float temp, float humidity, float pressure)
 {
   display.clear();
-  // String info = "RSSI = " + String(LoRa.packetRssi());
-  display.drawString(display.getWidth() / 2, display.getHeight() / 2 - 16, text);
+  String tempText = "temp = " + String(temp) + " C";
+  String humidityText = "hum = " + String(humidity) + " Rh";
+  String pressureText = "press = " + String(((int) pressure) / 1000) + " kPa";
+  String countText = "count = " + String(counter);
+  display.drawString(display.getWidth() / 2, display.getHeight() / 2 - 24, tempText);
+  display.drawString(display.getWidth() / 2, display.getHeight() / 2 - 10, humidityText);
+  display.drawString(display.getWidth() / 2, display.getHeight() / 2 + 4, pressureText);
+  display.drawString(display.getWidth() / 2, display.getHeight() / 2 + 18, countText);
   display.display();
 }

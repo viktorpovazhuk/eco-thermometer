@@ -18,3 +18,11 @@
 .metadata/
 .jxbrowser.userdata/
 RemoteSystemsTempFiles/
+/join_ctpl/
+/spi_i2c/
+/spi_i2c_lpm/
+/spi_test/
+/timer_test/
+/uart_spi_fix/
+/uart_test/
+/voltage_monitor_gui_msp430fr2433/

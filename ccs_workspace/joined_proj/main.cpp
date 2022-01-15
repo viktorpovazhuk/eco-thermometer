@@ -36,9 +36,9 @@ void main(void)
     PMM_unlockLPM5();
 
     // should unlock pins previously
-    initAdc();
-    ADC_startConversion(ADC_BASE,
-    ADC_REPEATED_SINGLECHANNEL);
+//    initAdc();
+//    ADC_startConversion(ADC_BASE,
+//    ADC_REPEATED_SINGLECHANNEL);
 
     // Enable global interrupts
     __enable_interrupt();
@@ -51,7 +51,13 @@ void main(void)
 
         __delay_cycles(100000);
     }
+
+    _low_power_mode_3();
+
     LoRa.setSyncWord(0xF3);
+
+    GPIO_setOutputLowOnPin(GPIO_PORT_P1,
+    GPIO_PIN0);
 
     while (!bme.begin())
     {
@@ -61,13 +67,17 @@ void main(void)
         __delay_cycles(100000);
     }
 
+    GPIO_setOutputLowOnPin(GPIO_PORT_P1,
+    GPIO_PIN0);
+
     while (1)
     {
+        _low_power_mode_3();
+
         GPIO_toggleOutputOnPin(GPIO_PORT_P1,
         GPIO_PIN1);
-        sendBME280Data();
 
-        _low_power_mode_3();
+        sendBME280Data();
     }
 
     return;
@@ -81,13 +91,21 @@ void sendBME280Data()
     bme.readData(data);
     bme.readDig(m_dig);
 
+    _low_power_mode_3();
+
     uint8_t controlValue = calculateControlValue((uint8_t*) data, 32, (uint8_t*) m_dig, 32);
 
     // send packet
     LoRa.beginPacket();
 
     LoRa.write((uint8_t*) data, 8 * 4);
+
+    _low_power_mode_3();
+
     LoRa.write((uint8_t*) m_dig, 32);
+
+    _low_power_mode_3();
+
     LoRa.write(controlValue);
 
     LoRa.endPacket();
