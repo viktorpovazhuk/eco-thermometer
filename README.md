@@ -11,6 +11,9 @@
 3. During time intervals between reading raw data, MCU is in low-power mode.
 4. Tranciever Ra-01, temperature sensor BME280 та MCU MSP430FR2433 are power from stable power supply provided by CJMCU-2557, which stores the energy extracted from solar cell in the supercapacitor.
 
+## Algorithm of work
+
+![Algorithm](https://drive.google.com/file/d/1IWgaRdB-Hr1IS11BisxK-5cfzm0fUIVL/view?usp=sharing)
 
 ## Wiki
 
